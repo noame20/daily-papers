@@ -1,8 +1,2 @@
-# Ignore all files/dirs by default
-*
-# Re-include only bundle.html and index.html at root level
-!bundle.html
-!index.html
-!.gitignore
-# Re-include each paper's bundle.html (but nothing else in those dirs)
-!*/bundle.html
+hf_cache.json
+*.pdf
