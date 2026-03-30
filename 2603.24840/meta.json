@@ -1,0 +1,5 @@
+{
+  "cn_title": "生成式剪枝：让AI学习数学题变得更快更聪明",
+  "tagline": "这篇论文教你如何用「边做边淘汰」的策略，让大型语言模型在做数学题时效率提升1.7倍，同时准确率更高！",
+  "title": "Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR"
+}
