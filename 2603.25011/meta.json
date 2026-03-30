@@ -1,0 +1,5 @@
+{
+  "cn_title": "Sparton：快速且内存高效的学习式稀疏检索 Triton 内核",
+  "tagline": "让 AI 检索模型跑得更快、占用更少内存的秘诀 - 了解一下这篇论文如何实现 4.8 倍速度提升和 12 倍内存降低",
+  "title": "Sparton: Fast and Memory-Efficient Triton Kernel for Learned Sparse Retrieval"
+}
