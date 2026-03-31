@@ -1,0 +1,5 @@
+{
+  "cn_title": "TerraSeg：适用于任意激光雷达的自监督地面分割",
+  "tagline": "一个无需人工标注、一个模型通吃所有激光雷达的革命性地面分割算法",
+  "title": "TerraSeg: Self-Supervised Ground Segmentation for Any LiDAR"
+}
