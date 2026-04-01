@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unify-Agent - 让AI画图更懂世界</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --bg: #0f172a;
+            --bg-light: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* 响应式布局 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(ellipse at top, #1a1a3e 0%, var(--bg) 70%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 30px); }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-authors {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-15px); }
+            60% { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        /* 导航 */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav a:hover {
+            color: var(--primary);
+        }
+
+        /* 区块样式 */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-light);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 问题与解决方案 */
+        .problem-solution {
+            background: var(--bg-light);
+            border-radius: 24px;
+            padding: 50px;
+            margin: 50px 0;
+        }
+
+        .problem-solution h3 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--warning);
+        }
+
+        .problem-solution ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .problem-solution li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-muted);
+        }
+
+        .problem-solution li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+
+        .solution {
+            color: var(--success) !important;
+        }
+
+        .solution::before {
+            content: '✓' !important;
+            color: var(--success) !important;
+        }
+
+        /* 流程图 */
+        .pipeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pipeline-stage {
+            background: var(--bg-light);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: all 0.3s;
+        }
+
+        .pipeline-stage:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .stage-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .stage-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .stage-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .stage-detail {
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 8px;
+            font-family: monospace;
+            background: rgba(6, 182, 212, 0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* 数据展示 */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .result-card {
+            background: var(--bg-light);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .result-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* 表格 */
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        th {
+            background: var(--bg-light);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-muted);
+        }
+
+        tr:hover td {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .highlight {
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        /* 对比图表 */
+        .comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .comparison-card {
+            background: var(--bg-light);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .comparison-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .bar-label {
+            width: 100px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .bar-container {
+            flex: 1;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            justify-content: flex-end;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: width 1s ease;
+        }
+
+        /* 创新点 */
+        .innovation {
+            position: relative;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 24px;
+            margin: 30px 0;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .innovation h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .innovation p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* 底部 */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--bg-light);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .nav-content {
+                gap: 15px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .problem-solution {
+                padding: 30px 20px;
+            }
+
+            .pipeline-stage {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 动画 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 标签 */
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* 引用块 */
+        blockquote {
+            background: var(--bg-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        /* 小屏幕优化 */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .result-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航 -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#overview">概览</a>
+            <a href="#problem">问题</a>
+            <a href="#solution">方案</a>
+            <a href="#method">方法</a>
+            <a href="#results">效果</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <span class="hero-badge">📄 论文解读</span>
+        <h1>Unify-Agent</h1>
+        <p class="hero-subtitle">
+            统一多模态智能体 — 让AI生成的图片更准确地反映真实世界知识
+        </p>
+        <p class="hero-authors">
+            Chen et al. · UCLA & 腾讯 & 香港中文大学 & HKUST
+        </p>
+        <svg class="scroll-indicator" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+    </section>
+
+    <!-- 概览 -->
+    <section id="overview">
+        <div class="container">
+            <h2 class="section-title">📖 这篇论文讲了什么？</h2>
+            <p class="section-subtitle">
+                想象一下：你让AI画一张"北京天坛"的照片，它画出来的建筑可能跟真实的天坛一点都不像。这是因为AI"记不住"世界上所有建筑的样子。Unify-Agent就是来解决这个问题的！
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(99, 102, 241, 0.2);">🎯</div>
+                    <h3>核心目标</h3>
+                    <p>让AI在画图之前先去"查资料"，确保画出来的内容符合真实世界的知识。比如画"龙猫"，就能知道它长什么样、有哪些特征。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(139, 92, 246, 0.2);">🔧</div>
+                    <h3>解决思路</h3>
+                    <p>把AI画图变成一个"智能体"工作流程：先理解需求 → 再搜索知识 → 然后重新描述需求 → 最后生成图片。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(6, 182, 212, 0.2);">📊</div>
+                    <h3>实际效果</h3>
+                    <p>在测试"稀有角色"、"小众场景"等难懂的知识点时，Unify-Agent比现有最好的模型效果更好！</p>
+                </div>
+            </div>
+
+            <div class="innovation">
+                <h3>💡 关键洞察</h3>
+                <p>这篇论文发现：AI画图失败的主要原因不是"画得不够好看"，而是"不知道要画的东西长什么样"。所以解决方案不是提高画图技术，而是让AI学会"查资料"后再画图。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 问题 -->
+    <section id="problem">
+        <div class="container">
+            <h2 class="section-title">🤔 现在AI画图有什么问题？</h2>
+            <p class="section-subtitle">
+                现有的AI画图系统看起来很厉害，但实际上有三个致命缺陷
+            </p>
+
+            <div class="problem-solution">
+                <h3>❌ 传统AI画图的三大问题</h3>
+                <ul>
+                    <li><strong>知识盲区</strong>：AI训练时见过的东西能画好，但如果让它画一个很少见的角色（比如某个国产动画的配角），它完全不知道长什么样</li>
+                    <li><strong>胡乱捏造</strong>：当AI不知道某个概念时，它会"脑补"——把不知道的部分随便画一个看起来合理的样子，结果往往是错的</li>
+                    <li><strong>外部知识用不上</strong>：虽然可以联网查资料，但现有的系统不知道怎么把这些资料转成画图的"指令"</li>
+                </ul>
+
+                <h3 style="color: var(--success);">✅ Unify-Agent的解决思路</h3>
+                <ul>
+                    <li class="solution"><strong>主动查资料</strong>：在画图之前，先判断自己是否认识这个概念，如果不认识就去搜索</li>
+                    <li class="solution"><strong>理解+搜索+生成</strong>：把整个过程变成一个流水线，每个步骤都知道自己要干什么</li>
+                    <li class="solution"><strong>知识重组</strong>：把查到的资料重新组织成"生成指令"，让画图AI能看懂并严格遵守</li>
+                </ul>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(239, 68, 68, 0.2);">🖼️</div>
+                    <h3>普通AI画"龙猫"</h3>
+                    <p>可能画出一个<strong>黑色的、毛茸茸的、像猫一样的动物</strong>——因为它从没见过宫崎骏的龙猫，只能凭感觉"创造"。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.2);">🎨</div>
+                    <h3>Unify-Agent画"龙猫"</h3>
+                    <p>先去搜索龙猫的资料，了解它的外形特征：圆圆的肚子、大耳朵、灰毛色……然后严格按照这些特征来画。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 方案 -->
+    <section id="solution">
+        <div class="container">
+            <h2 class="section-title">💡 核心创新点</h2>
+            <p class="section-subtitle">
+                Unify-Agent的四个关键技术突破
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(245, 158, 11, 0.2);">🧠</div>
+                    <h3>1️⃣ 认知gap检测</h3>
+                    <p>AI第一步先"灵魂拷问"自己：这个概念我到底认识不认识？如果不认识，就标记为"知识缺口"，触发搜索流程。</p>
+                    <span class="tag">Think</span>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(6, 182, 212, 0.2);">🔍</div>
+                    <h3>2️⃣ 多模态证据获取</h3>
+                    <p>先去网上搜索<strong>文字描述</strong>，再搜索<strong>参考图片</strong>。文字帮你理解概念，图片帮你确定长相。</p>
+                    <span class="tag">Research</span>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(139, 92, 246, 0.2);">✍️</div>
+                    <h3>3️⃣ 证据重描述</h3>
+                    <p>把查到的资料转成AI能理解的"画图指令"，同时<strong>保留原始特征</strong>（比如角色脸型）和<strong>新加元素</strong>（用户要求的场景）。</p>
+                    <span class="tag">Recaption</span>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: rgba(99, 102, 241, 0.2);">🎨</div>
+                    <h3>4️⃣ 知识锚定生成</h3>
+                    <p>最后一步，用重新组织的指令和参考图片一起生成最终图片。确保图片既符合真实知识，又满足用户的创作需求。</p>
+                    <span class="tag">Generate</span>
+                </div>
+            </div>
+
+            <div class="innovation">
+                <h3>🚀 最重要的创新</h3>
+                <p>之前的系统是把"搜索"和"画图"分开的两套系统，Unify-Agent首次把这两个能力<strong>统一在一个模型里</strong>。这样AI既能思考要不要查资料、查什么资料，又能直接用查到的结果来画画，效率更高、效果更好！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 方法 -->
+    <section id="method">
+        <div class="container">
+            <h2 class="section-title">🔬 工作原理解析</h2>
+            <p class="section-subtitle">
+                让我们用图解的方式理解Unify-Agent是怎么工作的
+            </p>
+
+            <h3 style="text-align: center; margin: 50px 0 30px; font-size: 1.5rem;">四阶段工作流程</h3>
+
+            <div class="pipeline">
+                <div class="pipeline-stage">
+                    <div class="stage-number">1</div>
+                    <div class="stage-content">
+                        <h4>THINK - 理解需求 & 检测知识缺口</h4>
+                        <p>AI读取用户的画图需求，分析哪些部分是自己"认识"的，哪些是"不认识"的。如果有不认识的部分，就记录下来准备去查。</p>
+                        <span class="stage-detail">输出：知识缺口列表 g</span>
+                    </div>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="stage-number">2</div>
+                    <div class="stage-content">
+                        <h4>RESEARCH - 搜索外部证据</h4>
+                        <p>分两步搜索：先搜文字资料了解基本概念，再搜图片资料看真实长相。两步的顺序很重要——文字先行，因为文字能帮你更准确地找到对的图片。</p>
+                        <span class="stage-detail">输出：文字证据 τₜ + 视觉证据 τᵥ</span>
+                    </div>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="stage-number">3</div>
+                    <div class="stage-content">
+                        <h4>RECAPTION - 证据重组 & 重描述</h4>
+                        <p>把用户的原始需求 + 搜到的资料，合并成一个新的、更详细的画图指令。这步的关键是"解耦"：把"要保留的身份特征"和"场景/动作要求"分开处理。</p>
+                        <span class="stage-detail">输出：重描述文本 c</span>
+                    </div>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="stage-number">4</div>
+                    <div class="stage-content">
+                        <h4>GENERATE - 最终图片生成</h4>
+                        <p>用重描述的文本指令 + 参考图片，一起生成最终图片。这一步会严格按照之前查到的真实知识来画，不会凭空捏造。</p>
+                        <span class="stage-detail">输出：符合世界知识的图片 y</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin: 60px 0 30px; font-size: 1.5rem;">为什么要这样设计？</h3>
+
+            <div class="comparison">
+                <div class="comparison-card">
+                    <h4>❌ 传统方法的问题</h4>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <span class="bar-label">文本知识</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 40%; background: #ef4444;">弱</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">视觉知识</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 30%; background: #ef4444;">很弱</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">知识融合</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 20%; background: #ef4444;">几乎无</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">直接把搜到的文字和图片塞给AI，AI不知道怎么处理，容易产生混乱</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>✅ Unify-Agent的方法</h4>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <span class="bar-label">文本知识</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 85%; background: var(--success);">强</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">视觉知识</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 80%; background: var(--success);">强</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">知识融合</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 90%; background: var(--success);">很强</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">通过"重描述"把知识转成AI能理解的形式，确保知识被正确使用</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 效果 -->
+    <section id="results">
+        <div class="container">
+            <h2 class="section-title">📊 实验效果</h2>
+            <p class="section-subtitle">
+                Unify-Agent在多个基准测试上都超越了现有最强模型
+            </p>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">77</div>
+                    <div class="result-label">FactIP综合得分（满分100）</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">+26</div>
+                    <div class="result-label">相比基础模型提升（基线只有51）</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">143K</div>
+                    <div class="result-label">训练数据量（高质量智能体轨迹）</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">12</div>
+                    <div class="result-label">测试的知识类别数量</div>
+                </div>
+            </div>
+
+            <h3 style="margin: 50px 0 30px; font-size: 1.3rem;">FactIP 基准测试结果（与顶级商业模型对比）</h3>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>模型</th>
+                            <th>类型</th>
+                            <th>清晰度</th>
+                            <th>内容</th>
+                            <th>美学</th>
+                            <th>相关性</th>
+                            <th>总分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>NanoBanana-2</td>
+                            <td>商业</td>
+                            <td>96.6</td>
+                            <td>88.2</td>
+                            <td>90.4</td>
+                            <td>88.2</td>
+                            <td class="highlight">88.5</td>
+                        </tr>
+                        <tr>
+                            <td>GPT-Image-1</td>
+                            <td>商业</td>
+                            <td>94.6</td>
+                            <td>94.1</td>
+                            <td>94.1</td>
+                            <td>71.1</td>
+                            <td>83.5</td>
+                        </tr>
+                        <tr>
+                            <td>Unify-Agent (本文)</td>
+                            <td>开源</td>
+                            <td>94.5</td>
+                            <td>90.4</td>
+                            <td>91.0</td>
+                            <td>85.0</td>
+                            <td class="highlight">77.0</td>
+                        </tr>
+                        <tr>
+                            <td>FLUX.1-dev</td>
+                            <td>开源</td>
+                            <td>92.5</td>
+                            <td>89.0</td>
+                            <td>91.8</td>
+                            <td>51.9</td>
+                            <td>28.9</td>
+                        </tr>
+                        <tr>
+                            <td>BAGEL (基线)</td>
+                            <td>开源</td>
+                            <td>85.2</td>
+                            <td>67.6</td>
+                            <td>79.9</td>
+                            <td>37.5</td>
+                            <td>51.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <blockquote>
+                <strong>关键发现：</strong>Unify-Agent作为<strong>开源模型</strong>，在"相关性"指标上（衡量生成内容是否符合真实世界知识）达到了85分，显著超越了FLUX.1-dev（51.9）和BAGEL基线（37.5），证明其世界知识整合能力的有效性。
+            </blockquote>
+
+            <h3 style="margin: 50px 0 30px; font-size: 1.3rem;">WiSE 基准测试（跨领域知识能力）</h3>
+
+            <div class="comparison">
+                <div class="comparison-card">
+                    <h4>🌍 各领域知识理解能力</h4>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <span class="bar-label">文化</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 82%; background: var(--primary);">0.82</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">时间</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 75%; background: var(--secondary);">0.75</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">空间</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 74%; background: var(--accent);">0.74</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">生物</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 72%; background: var(--success);">0.72</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">物理</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 73%; background: var(--warning);">0.73</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">综合得分 0.77，超越BAGEL+CoT (0.70)，接近顶级商业模型</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>🏆 消融实验：各模块的贡献</h4>
+                    <p style="margin-bottom: 20px; color: var(--text-muted);">逐步添加各组件后，模型性能的提升：</p>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <span class="bar-label">仅基线</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 40%; background: #64748b;">-</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">+ 文本搜索</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 55%; background: var(--primary);">+15</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">+ 视觉搜索</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 70%; background: var(--secondary);">+15</div>
+                            </div>
+                        </div>
+                        <div class="bar-item">
+                            <span class="bar-label">+ 重描述</span>
+                            <div class="bar-container">
+                                <div class="bar-fill" style="width: 85%; background: var(--success);">+15</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">三个组件的贡献大致相等，每个都带来约15%的提升</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 总结 -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">🎯 总结与展望</h2>
+
+            <div class="innovation">
+                <h3>📌 论文的核心贡献</h3>
+                <p>Unify-Agent首次展示了如何把"智能体"（能自主思考、搜索、执行任务的AI）和"多模态生成"（能画图的AI）统一起来。这不仅仅是技术上的创新，更是一种范式转变——未来的AI不再是被动地"你让我画什么我就画什么"，而是会主动思考"我需要先了解什么，然后才能画对"。</p>
+            </div>
+
+            <div class="card-grid" style="margin-top: 40px;">
+                <div class="card">
+                    <h3>🔬 科学研究价值</h3>
+                    <p>提出了FactIP基准测试，专门评估AI对"世界上稀有、长尾知识"的理解和表达能力，这是该领域首个此类基准。</p>
+                </div>
+                <div class="card">
+                    <h3>🛠️ 工程应用价值</h3>
+                    <p>证明了端到端统一模型比"拼接式"（多个模型串联）效果更好，为未来实际应用部署提供了更高效的方案。</p>
+                </div>
+                <div class="card">
+                    <h3>🚀 未来发展方向</h3>
+                    <p>如何处理更复杂的知识（如动态场景、故事叙事）、如何加速推理速度、如何支持更多语言和文化背景。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            📄 论文：Unify-Agent: A Unified Multimodal Agent for World-Grounded Image Synthesis<br>
+            🔗 GitHub：github.com/shawn0728/Unify-Agent<br><br>
+            本解读由 Claude 生成 | 仅供学习参考
+        </p>
+    </footer>
+
+    <script>
+        // 滚动动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card, .pipeline-stage, .comparison-card, .result-card').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        // 导航高亮
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.style.color = link.getAttribute('href') === '#' + current
+                    ? 'var(--primary)'
+                    : 'var(--text-muted)';
+            });
+        });
+
+        // 数字动画
+        const counters = document.querySelectorAll('.result-number');
+        counters.forEach(counter => {
+            const target = parseInt(counter.innerText.replace(/\D/g, ''));
+            const suffix = counter.innerText.replace(/[\d]/g, '');
+            let current = 0;
+            const step = target / 50;
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    counter.innerText = target + suffix;
+                    clearInterval(timer);
+                } else {
+                    counter.innerText = Math.floor(current) + suffix;
+                }
+            }, 30);
+        });
+    </script>
+</body>
+</html>
