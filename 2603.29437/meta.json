@@ -1,3 +1,5 @@
 {
+  "cn_title": "SeGPruner：让AI在3D场景中看得更少、想得更快",
+  "tagline": "如何用「智能裁剪」把5760个图像碎片精简到520个，同时让AI回答问题既快又准？",
   "title": "SeGPruner: Semantic-Geometric Visual Token Pruner for 3D Question Answering"
 }
