@@ -69,6 +69,95 @@ header .stats {
   letter-spacing: 1px;
 }
 
+/* Pagefind search */
+#search-wrap {
+  margin-top: 28px;
+  max-width: 520px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+#search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+#search-input::placeholder {
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* Pagefind UI overrides */
+.pagefind-ui {
+  --pagefind-ui-scale: 0.85;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--card-bg);
+  --pagefind-ui-border: var(--border);
+  --pagefind-ui-tag: var(--accent-light);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 4px;
+  --pagefind-ui-image-border-radius: 4px;
+  --pagefind-ui-font: 'Noto Sans SC', sans-serif;
+}
+
+#search-results {
+  margin-top: 8px;
+}
+
+#search-results a {
+  display: block;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--ink);
+  margin-bottom: 8px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+#search-results a:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(28,25,23,0.08);
+}
+
+#search-results a .result-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+#search-results a .result-excerpt {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#search-noresult {
+  padding: 16px;
+  font-size: 14px;
+  color: var(--ink-light);
+}
+
 main {
   max-width: 1100px;
   margin: 0 auto;
@@ -209,10 +298,42 @@ footer a:hover { text-decoration: underline; }
   <div class="kicker">HuggingFace Trending · AI 论文解读</div>
   <h1>每日论文</h1>
   <p class="subtitle">每天用 AI 解读最值得读的 HuggingFace 热门论文，用通俗易懂的中文呈现核心创新与关键结果。</p>
-  <div class="stats">已解读 186 篇论文</div>
+  <div class="stats">已解读 190 篇论文</div>
+  <div id="search-wrap">
+    <input type="text" id="search-input" placeholder="搜索论文标题或关键词…" autocomplete="off">
+    <div id="search-results"></div>
+  </div>
 </header>
 <main>
 <div class="date-label">2026-04-04</div><div class="grid">
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01907/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01907</span>
+            <h2 class="cn-title">Lifting Unlabeled Internet-level Data for 3D Scene Understanding</h2>
+            <p class="en-title">Lifting Unlabeled Internet-level Data for 3D Scene Understanding</p>
+            <p class="tagline"></p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01929/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01929</span>
+            <h2 class="cn-title">Woosh：声音特效基础模型</h2>
+            <p class="en-title">Woosh: A Sound Effects Foundation Model</p>
+            <p class="tagline">索尼AI黑科技！输入文字或视频，AI在几秒内生成专业级音效，游戏影视创作者的必备神器！</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01973/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01973</span>
+            <h2 class="cn-title">NearID: Identity Representation Learning via Near-identity Distractors</h2>
+            <p class="en-title">NearID: Identity Representation Learning via Near-identity Distractors</p>
+            <p class="tagline"></p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.02241/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.02241</span>
+            <h2 class="cn-title">UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models</h2>
+            <p class="en-title">UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models</p>
+            <p class="tagline"></p>
+            <span class="arrow">→</span>
+        </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.02007/bundle.html" target="_blank" rel="noopener">
             <span class="paper-id">#2604.02007</span>
             <h2 class="cn-title">Apriel-Reasoner：用强化学习让AI既聪明又高效地思考</h2>
@@ -1520,5 +1641,17 @@ footer a:hover { text-decoration: underline; }
   <span>由 OpenClaw AI 全自动生成 &nbsp;·&nbsp; 2026-04-04</span>
   <a href="https://github.com/noame20/daily-papers" target="_blank">GitHub</a>
 </footer>
+<script src="/pagefind/pagefind-ui.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    new PagefindUI({
+      element: "#search-results",
+      showSubResults: false,
+      showImages: false,
+      resetStyles: false,
+      excerptLength: 20,
+    });
+  });
+</script>
 </body>
 </html>
