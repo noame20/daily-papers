@@ -208,19 +208,7 @@ footer a:hover { text-decoration: underline; }
   margin-top: 16px;
   position: relative;
 }
-.pagefind-ui {
-  --pagefind-ui-scale: 0.85;
-  --pagefind-ui-primary: var(--accent);
-  --pagefind-ui-text: var(--ink);
-  --pagefind-ui-background: var(--card-bg);
-  --pagefind-ui-border: var(--border);
-  --pagefind-ui-tag: var(--accent-light);
-  --pagefind-ui-border-width: 1px;
-  --pagefind-ui-border-radius: 4px;
-  --pagefind-ui-image-border-radius: 4px;
-  --pagefind-ui-font: 'Noto Sans SC', sans-serif;
-}
-.pagefind-ui__search-input {
+#search-input {
   width: 100%;
   max-width: 420px;
   padding: 10px 14px;
@@ -233,14 +221,26 @@ footer a:hover { text-decoration: underline; }
   outline: none;
   transition: border-color 200ms ease;
 }
-.pagefind-ui__search-input:focus {
+#search-input:focus {
   border-color: var(--accent);
 }
-.pagefind-ui__search-input::placeholder {
+#search-input::placeholder {
   color: var(--ink-light);
   font-weight: 300;
 }
-.pagefind-ui__results {
+.pagefind-ui {
+  --pagefind-ui-scale: 0.85;
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--card-bg);
+  --pagefind-ui-border: var(--border);
+  --pagefind-ui-tag: var(--accent-light);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 4px;
+  --pagefind-ui-image-border-radius: 4px;
+  --pagefind-ui-font: 'Noto Sans SC', sans-serif;
+}
+#search-results {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -254,7 +254,7 @@ footer a:hover { text-decoration: underline; }
   max-height: 70vh;
   overflow-y: auto;
 }
-.pagefind-ui__result {
+#search-results a {
   display: block;
   padding: 14px 18px;
   text-decoration: none;
@@ -262,20 +262,20 @@ footer a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
   transition: background 120ms ease;
 }
-.pagefind-ui__result:last-child {
+#search-results a:last-child {
   border-bottom: none;
 }
-.pagefind-ui__result:hover {
+#search-results a:hover {
   background: var(--accent-light);
 }
-.pagefind-ui__result-title {
+#search-results a .result-title {
   font-family: 'Noto Serif SC', serif;
   font-size: 15px;
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 4px;
 }
-.pagefind-ui__result-excerpt {
+#search-results a .result-excerpt {
   font-size: 12px;
   color: var(--ink-light);
   line-height: 1.5;
@@ -284,7 +284,7 @@ footer a:hover { text-decoration: underline; }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.pagefind-ui__noresults {
+#search-noresult {
   padding: 16px 18px;
   font-size: 13px;
   color: var(--ink-light);
@@ -297,13 +297,63 @@ footer a:hover { text-decoration: underline; }
   <div class="kicker">HuggingFace Trending · AI 论文解读</div>
   <h1>每日论文</h1>
   <p class="subtitle">每天用 AI 解读最值得读的 HuggingFace 热门论文，用通俗易懂的中文呈现核心创新与关键结果。</p>
-  <div class="stats">已解读 193 篇论文</div>
+  <div class="stats">已解读 200 篇论文</div>
   <div id="search-wrap">
+    <input type="text" id="search-input" placeholder="搜索论文标题或关键词…" autocomplete="off">
     <div id="search-results"></div>
   </div>
 </header>
 <main>
-<div class="date-label">2026-04-04</div><div class="grid">
+<div class="date-label">2026-04-05</div><div class="grid">
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01202/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01202</span>
+            <h2 class="cn-title">Therefore I am. I Think</h2>
+            <p class="en-title">Therefore I am. I Think</p>
+            <p class="tagline">Therefore I am. I Think</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01569/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01569</span>
+            <h2 class="cn-title">VideoZeroBench：视频AI的极限挑战</h2>
+            <p class="en-title">VideoZeroBench: Probing the Limits of Video MLLMs with Spatio-Temporal Evidence Verification</p>
+            <p class="tagline">当AI说它'看懂'视频时，它真的看对了吗？这篇论文揭示了视频AI的真实水平——即使最强模型也几乎无法通过最严格的考验。</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01591/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01591</span>
+            <h2 class="cn-title">ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement</h2>
+            <p class="en-title">ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement</p>
+            <p class="tagline">ThinkTwice: Jointly Optimizing Large Language Models for Reasoning and Self-Refinement</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01618/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01618</span>
+            <h2 class="cn-title">Tex3D：物体作为攻击面——针对视觉-语言-动作模型的对抗性3D纹理攻击</h2>
+            <p class="en-title">Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models</p>
+            <p class="tagline">只需改变物体表面的纹理图案，就能让机器人完全失控？这项研究揭示了智能机器人的致命安全漏洞！</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01619/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01619</span>
+            <h2 class="cn-title">Automatic Image-Level Morphological Trait Annotation for Organismal Images</h2>
+            <p class="en-title">Automatic Image-Level Morphological Trait Annotation for Organismal Images</p>
+            <p class="tagline">Automatic Image-Level Morphological Trait Annotation for Organismal Images</p>
+            <span class="arrow">→</span>
+        </a></div><div class="date-label">2026-04-04</div><div class="grid">
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01658/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01658</span>
+            <h2 class="cn-title">CORAL：迈向自主多智能体进化</h2>
+            <p class="en-title">CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery</p>
+            <p class="tagline">让AI agents自己学会探索未知世界，不再需要人类手把手教！多个智能体像研究团队一样协作发现最优解</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01664/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01664</span>
+            <h2 class="cn-title">ContextBudget: 让AI'记忆'更聪明</h2>
+            <p class="en-title">ContextBudget: Budget-Aware Context Management for Long-Horizon Search Agents</p>
+            <p class="tagline">揭秘AI如何智能管理'记忆空间'——浙江大学与阿里巴巴联合研究，让AI在有限内存下完成复杂长程推理任务</p>
+            <span class="arrow">→</span>
+        </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.01666/bundle.html" target="_blank" rel="noopener">
             <span class="paper-id">#2604.01666</span>
             <h2 class="cn-title">DynaVid：用合成运动数据生成高度动态视频</h2>
@@ -329,7 +379,7 @@ footer a:hover { text-decoration: underline; }
             <span class="paper-id">#2604.01907</span>
             <h2 class="cn-title">Lifting Unlabeled Internet-level Data for 3D Scene Understanding</h2>
             <p class="en-title">Lifting Unlabeled Internet-level Data for 3D Scene Understanding</p>
-            <p class="tagline"></p>
+            <p class="tagline">Lifting Unlabeled Internet-level Data for 3D Scene Understanding</p>
             <span class="arrow">→</span>
         </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.01929/bundle.html" target="_blank" rel="noopener">
@@ -343,14 +393,14 @@ footer a:hover { text-decoration: underline; }
             <span class="paper-id">#2604.01973</span>
             <h2 class="cn-title">NearID: Identity Representation Learning via Near-identity Distractors</h2>
             <p class="en-title">NearID: Identity Representation Learning via Near-identity Distractors</p>
-            <p class="tagline"></p>
+            <p class="tagline">NearID: Identity Representation Learning via Near-identity Distractors</p>
             <span class="arrow">→</span>
         </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.02241/bundle.html" target="_blank" rel="noopener">
             <span class="paper-id">#2604.02241</span>
             <h2 class="cn-title">UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models</h2>
             <p class="en-title">UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models</p>
-            <p class="tagline"></p>
+            <p class="tagline">UAV-Track VLA: Embodied Aerial Tracking via Vision-Language-Action Models</p>
             <span class="arrow">→</span>
         </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.02007/bundle.html" target="_blank" rel="noopener">
@@ -1657,7 +1707,7 @@ footer a:hover { text-decoration: underline; }
         </a></div>
 </main>
 <footer>
-  <span>由 OpenClaw AI 全自动生成 &nbsp;·&nbsp; 2026-04-04</span>
+  <span>由 OpenClaw AI 全自动生成 &nbsp;·&nbsp; 2026-04-05</span>
   <a href="https://github.com/noame20/daily-papers" target="_blank">GitHub</a>
 </footer>
 <script src="/daily-papers/pagefind/pagefind-ui.js"></script>
@@ -1669,7 +1719,7 @@ footer a:hover { text-decoration: underline; }
       showImages: false,
       resetStyles: false,
       excerptLength: 20,
-      bundlePath: "/daily-papers/pagefind/",
+      bundlePath: "/daily-papers/pagefind",
     });
   });
 </script>
