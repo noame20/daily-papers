@@ -1,3 +1,5 @@
 {
+  "cn_title": "INSID3：DINOv3驱动的零训练上下文分割",
+  "tagline": "无需训练就能分割！INSID3在9个数据集上全面领先，mIoU全面超越",
   "title": "INSID3: Training-Free In-Context Segmentation with DINOv3"
 }

@@ -1,5 +1,5 @@
 {
-  "cn_title": "CRAFT：部分信息下的多智能体 grounded 协同",
-  "tagline": "当多个AI只能看到拼图的一角，它们如何通过对话协作完成整体构建？这项研究揭示了一个令人惊讶的真相——更小的AI模型反而可能比顶级模型更擅长团队合作！",
+  "cn_title": "CRAFT：部分信息下的多智能体协同搭积木",
+  "tagline": "三个AI指挥一个建筑工，谁都看不到全貌——它们能配合好吗？",
   "title": "CRAFT: Grounded Multi-Agent Coordination Under Partial Information"
 }

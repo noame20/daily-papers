@@ -1,0 +1,5 @@
+{
+  "cn_title": "GenMask：用扩散模型直接生成分割掩码",
+  "tagline": "告别繁琐的特征提取！GenMask让分割任务和图像生成共用一个AI模型，通过特殊的噪声采样策略，实现更简单、更强大的分割效果。",
+  "title": "GenMask: Adapting DiT for Segmentation via Direct Mask"
+}

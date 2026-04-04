@@ -1,3 +1,5 @@
 {
-  "title": "PMT: Plain Mask Transformer for Image and Video Segmentation with Frozen Vision Encoders"
+  "title": "PMT: Plain Mask Transformer for Image and Video Segmentation with Frozen Vision Encoders",
+  "cn_title": "PMT：冻结编码器也能做图像视频分割",
+  "tagline": "不训练整个模型就能分割图像！一个小\"翻译器\"让视觉大模型推理速度提升数倍"
 }

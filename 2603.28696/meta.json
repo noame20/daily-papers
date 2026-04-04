@@ -1,3 +1,5 @@
 {
-  "title": "AdaptToken: Entropy-based Adaptive Token Selection for MLLM Long Video Understanding"
+  "title": "AdaptToken: Entropy-based Adaptive Token Selection for MLLM Long Video Understanding",
+  "cn_title": "AdaptToken：基于熵的自适应Token选择，让AI看懂超长视频",
+  "tagline": "让AI高效看完2小时电影再回答问题！基于熵的自适应Token选择术"
 }

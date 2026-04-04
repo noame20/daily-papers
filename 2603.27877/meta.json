@@ -1,3 +1,5 @@
 {
-  "title": "HumMusQA: A Human-written Music Understanding QA Benchmark Dataset"
+  "title": "HumMusQA: A Human-written Music Understanding QA Benchmark Dataset",
+  "cn_title": "HumMusQA：音乐理解AI评估的\"照妖镜\"",
+  "tagline": "纯文本模型不看乐谱也能蒙对题？这个基准让所有AI音乐理解能力无处遁形"
 }

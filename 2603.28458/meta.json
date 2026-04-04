@@ -1,3 +1,5 @@
 {
-  "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention"
+  "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
+  "cn_title": "HISA：两阶段查找让长文本处理不再头疼",
+  "tagline": "先粗选再精选！两阶段策略让AI在128字中找到最相关的那个字"
 }

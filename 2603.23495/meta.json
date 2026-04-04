@@ -1,0 +1,5 @@
+{
+  "cn_title": "视觉按需调度（VISOR）：让AI",
+  "tagline": "不再粗暴压缩图片，而是智能分配注意力——这篇论文让大型多模态模型既快又准，看完这篇你也能给同学讲解！",
+  "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions"
+}

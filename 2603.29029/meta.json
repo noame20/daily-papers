@@ -1,3 +1,5 @@
 {
-  "title": "MMFace-DiT: A Dual-Stream Diffusion Transformer for High-Fidelity Multimodal Face Generation"
+  "title": "MMFace-DiT: A Dual-Stream Diffusion Transformer for High-Fidelity Multimodal Face Generation",
+  "cn_title": "MMFace-DiT：双流扩散Transformer实现高保真人脸生成",
+  "tagline": "文字+草图就能生成同款人脸！双流架构打通多模态信息"
 }

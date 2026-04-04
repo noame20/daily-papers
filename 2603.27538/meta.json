@@ -1,3 +1,5 @@
 {
-  "title": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens"
+  "title": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens",
+  "cn_title": "一个模型听懂看明白：LongCat-Next打破文字、图片、声音边界",
+  "tagline": "将世界万物转化为离散token！LongCat-Next让AI同时理解文字、图片和声音"
 }

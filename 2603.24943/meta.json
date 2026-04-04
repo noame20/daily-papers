@@ -1,3 +1,5 @@
 {
-  "title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol"
+  "title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol",
+  "cn_title": "FinMCP-Bench：金融LLM智能体工具调用评测基准",
+  "tagline": "让AI成为金融分析师！大模型能否像人类一样熟练使用金融工具？"
 }

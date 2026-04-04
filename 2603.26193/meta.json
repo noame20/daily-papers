@@ -1,3 +1,5 @@
 {
-  "title": "MemCam: Memory-Augmented Camera Control for Consistent Video Generation"
+  "title": "MemCam: Memory-Augmented Camera Control for Consistent Video Generation",
+  "cn_title": "MemCam：记忆增强的相机控制实现一致视频生成",
+  "tagline": "视频生成不再\"跳帧\"！记忆模块让AI创作超长镜头也能保持连贯"
 }

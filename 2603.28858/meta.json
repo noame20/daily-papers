@@ -1,3 +1,5 @@
 {
-  "title": "OptiMer: Optimal Distribution Vector Merging Is Better than Data Mixing for Continual Pre-Training"
+  "title": "OptiMer: Optimal Distribution Vector Merging Is Better than Data Mixing for Continual Pre-Training",
+  "cn_title": "OptiMer：最优分布向量合并，持续预训练的数据混合新方法",
+  "tagline": "训练AI数据配比总调不好？这项研究让你找到最优混合比例"
 }

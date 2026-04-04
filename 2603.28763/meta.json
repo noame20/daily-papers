@@ -1,3 +1,5 @@
 {
-  "title": "PoseDreamer: Scalable and Photorealistic Human Data Generation Pipeline with Diffusion Models"
+  "title": "PoseDreamer: Scalable and Photorealistic Human Data Generation Pipeline with Diffusion Models",
+  "cn_title": "PoseDreamer：扩散模型驱动的可扩展逼真人数据生成",
+  "tagline": "想要什么姿势就生成什么！扩散模型打造人体数据生成流水线"
 }

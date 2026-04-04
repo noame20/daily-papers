@@ -1,3 +1,5 @@
 {
-  "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation"
+  "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
+  "cn_title": "S2D2：扩散语言模型的自推测解码加速",
+  "tagline": "同一个模型既能\"起草\"又能\"验证\"！扩散LLM生成速度提升数倍"
 }

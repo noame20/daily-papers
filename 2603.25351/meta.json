@@ -1,3 +1,5 @@
 {
-  "title": "Image Rotation Angle Estimation: Comparing Circular-Aware Methods"
+  "title": "Image Rotation Angle Estimation: Comparing Circular-Aware Methods",
+  "cn_title": "图像旋转角度估计：让AI看懂歪斜的图片",
+  "tagline": "环形高斯分布让角度预测更稳定！AI现在能精确判断图片歪了多少度"
 }

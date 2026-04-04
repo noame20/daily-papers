@@ -1,3 +1,5 @@
 {
-  "title": "MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning"
+  "title": "MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning",
+  "cn_title": "MSRL：多阶段强化学习搞定图文视频评价",
+  "tagline": "教AI当裁判！用文本数据教会模型评价图片，视频生成质量也能判断"
 }

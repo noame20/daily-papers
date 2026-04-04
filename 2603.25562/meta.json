@@ -1,3 +1,5 @@
 {
-  "title": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes"
+  "title": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes",
+  "cn_title": "在线策略蒸馏：实证失败模式与简单修复",
+  "tagline": "不只看一个token！新方法让蒸馏更稳定，AI学习效率大幅提升"
 }

@@ -1,3 +1,5 @@
 {
-  "title": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays"
+  "title": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays",
+  "cn_title": "CoGaze：像放射科医生一样看片的视觉语言预训练",
+  "tagline": "AI学看X光片新招！让模型掌握医生诊断思路，多项指标超最优"
 }

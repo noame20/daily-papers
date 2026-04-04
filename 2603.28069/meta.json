@@ -1,3 +1,5 @@
 {
-  "title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens"
+  "title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens",
+  "cn_title": "MolmoPoint：让AI精准\"指向\"图片的视觉语言模型",
+  "tagline": "用视觉标记代替文字坐标，AI也能像人一样准确指向图片中的物体了"
 }

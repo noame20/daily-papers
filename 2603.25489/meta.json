@@ -1,3 +1,5 @@
 {
-  "title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties"
+  "title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties",
+  "cn_title": "翻译不对称性：罗马尼亚语变体的数据增强案例",
+  "tagline": "大模型翻译有\"脸盲症\"！从资源少语言翻译到资源多语言，效果提升数倍"
 }

@@ -1,3 +1,5 @@
 {
-  "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills"
+  "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills",
+  "cn_title": "Trace2Skill：从失败经验中提炼可迁移技能",
+  "tagline": "AI也能\"吃一堑长一智\"！小模型学会的技能竟能让大模型更聪明"
 }

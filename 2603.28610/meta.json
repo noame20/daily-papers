@@ -1,3 +1,5 @@
 {
-  "title": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning"
+  "title": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning",
+  "cn_title": "ResAdapt：聪明分配计算资源的视觉理解系统",
+  "tagline": "不是所有画面都需要高清处理！ResAdapt节省超过90%计算成本同时保持能力"
 }

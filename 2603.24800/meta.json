@@ -1,3 +1,5 @@
 {
-  "title": "Calibri: Enhancing Diffusion Transformers via Parameter-Efficient Calibration"
+  "title": "Calibri: Enhancing Diffusion Transformers via Parameter-Efficient Calibration",
+  "cn_title": "Calibri：扩散Transformer参数高效校准",
+  "tagline": "只需一个缩放系数，扩散模型生成速度提升数倍！这项研究给AI装上\"音量旋钮\"，图像质量飞跃"
 }

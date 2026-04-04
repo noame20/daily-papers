@@ -1,5 +1,5 @@
 {
-  "cn_title": "超越眼动路径：动态场景中的图结构视线模拟",
-  "tagline": "当人工智能学会预测人类开车时的视线走向，自动驾驶安全将迎来新突破——这篇论文用图神经网络打开了新的可能",
+  "cn_title": "超越眼动轨迹：动态场景中的图神经网络注视模拟",
+  "tagline": "让计算机学会预测开车时司机会看向哪里——一项让AI理解人类注意力的前沿研究",
   "title": "Beyond Scanpaths: Graph-Based Gaze Simulation in Dynamic Scenes"
 }
