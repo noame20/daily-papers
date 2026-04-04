@@ -1,2 +1,6 @@
 hf_cache.json
 *.pdf
+*/paper-explainer/
+*/.parcel-cache/
+*/dist/
+*/build/
