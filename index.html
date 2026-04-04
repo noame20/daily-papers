@@ -208,26 +208,6 @@ footer a:hover { text-decoration: underline; }
   margin-top: 16px;
   position: relative;
 }
-#search-input {
-  width: 100%;
-  max-width: 420px;
-  padding: 10px 14px;
-  font-size: 14px;
-  font-family: 'Noto Sans SC', sans-serif;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--card-bg);
-  color: var(--ink);
-  outline: none;
-  transition: border-color 200ms ease;
-}
-#search-input:focus {
-  border-color: var(--accent);
-}
-#search-input::placeholder {
-  color: var(--ink-light);
-  font-weight: 300;
-}
 .pagefind-ui {
   --pagefind-ui-scale: 0.85;
   --pagefind-ui-primary: var(--accent);
@@ -240,7 +220,27 @@ footer a:hover { text-decoration: underline; }
   --pagefind-ui-image-border-radius: 4px;
   --pagefind-ui-font: 'Noto Sans SC', sans-serif;
 }
-#search-results {
+.pagefind-ui__search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Noto Sans SC', sans-serif;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 200ms ease;
+}
+.pagefind-ui__search-input:focus {
+  border-color: var(--accent);
+}
+.pagefind-ui__search-input::placeholder {
+  color: var(--ink-light);
+  font-weight: 300;
+}
+.pagefind-ui__results {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -254,7 +254,7 @@ footer a:hover { text-decoration: underline; }
   max-height: 70vh;
   overflow-y: auto;
 }
-#search-results a {
+.pagefind-ui__result {
   display: block;
   padding: 14px 18px;
   text-decoration: none;
@@ -262,20 +262,20 @@ footer a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
   transition: background 120ms ease;
 }
-#search-results a:last-child {
+.pagefind-ui__result:last-child {
   border-bottom: none;
 }
-#search-results a:hover {
+.pagefind-ui__result:hover {
   background: var(--accent-light);
 }
-#search-results a .result-title {
+.pagefind-ui__result-title {
   font-family: 'Noto Serif SC', serif;
   font-size: 15px;
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 4px;
 }
-#search-results a .result-excerpt {
+.pagefind-ui__result-excerpt {
   font-size: 12px;
   color: var(--ink-light);
   line-height: 1.5;
@@ -284,7 +284,7 @@ footer a:hover { text-decoration: underline; }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-#search-noresult {
+.pagefind-ui__noresults {
   padding: 16px 18px;
   font-size: 13px;
   color: var(--ink-light);
@@ -297,14 +297,20 @@ footer a:hover { text-decoration: underline; }
   <div class="kicker">HuggingFace Trending · AI 论文解读</div>
   <h1>每日论文</h1>
   <p class="subtitle">每天用 AI 解读最值得读的 HuggingFace 热门论文，用通俗易懂的中文呈现核心创新与关键结果。</p>
-  <div class="stats">已解读 190 篇论文</div>
+  <div class="stats">已解读 191 篇论文</div>
   <div id="search-wrap">
-    <input type="text" id="search-input" placeholder="搜索论文标题或关键词…" autocomplete="off">
     <div id="search-results"></div>
   </div>
 </header>
 <main>
 <div class="date-label">2026-04-04</div><div class="grid">
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01760/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01760</span>
+            <h2 class="cn-title">T5Gemma-TTS 零样本语音克隆技术</h2>
+            <p class="en-title">T5Gemma-TTS Technical Report</p>
+            <p class="tagline">仅凭3秒参考音频就能克隆任意人的声音！了解AI如何学习「开口说话」——用通俗易懂的语言解读前沿语音合成技术</p>
+            <span class="arrow">→</span>
+        </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.01907/bundle.html" target="_blank" rel="noopener">
             <span class="paper-id">#2604.01907</span>
             <h2 class="cn-title">Lifting Unlabeled Internet-level Data for 3D Scene Understanding</h2>
