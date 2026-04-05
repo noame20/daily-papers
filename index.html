@@ -208,26 +208,6 @@ footer a:hover { text-decoration: underline; }
   margin-top: 16px;
   position: relative;
 }
-#search-input {
-  width: 100%;
-  max-width: 420px;
-  padding: 10px 14px;
-  font-size: 14px;
-  font-family: 'Noto Sans SC', sans-serif;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--card-bg);
-  color: var(--ink);
-  outline: none;
-  transition: border-color 200ms ease;
-}
-#search-input:focus {
-  border-color: var(--accent);
-}
-#search-input::placeholder {
-  color: var(--ink-light);
-  font-weight: 300;
-}
 .pagefind-ui {
   --pagefind-ui-scale: 0.85;
   --pagefind-ui-primary: var(--accent);
@@ -240,7 +220,27 @@ footer a:hover { text-decoration: underline; }
   --pagefind-ui-image-border-radius: 4px;
   --pagefind-ui-font: 'Noto Sans SC', sans-serif;
 }
-#search-results {
+.pagefind-ui__search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: 'Noto Sans SC', sans-serif;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 200ms ease;
+}
+.pagefind-ui__search-input:focus {
+  border-color: var(--accent);
+}
+.pagefind-ui__search-input::placeholder {
+  color: var(--ink-light);
+  font-weight: 300;
+}
+.pagefind-ui__results {
   position: absolute;
   top: calc(100% + 4px);
   left: 0;
@@ -254,7 +254,7 @@ footer a:hover { text-decoration: underline; }
   max-height: 70vh;
   overflow-y: auto;
 }
-#search-results a {
+.pagefind-ui__result {
   display: block;
   padding: 14px 18px;
   text-decoration: none;
@@ -262,20 +262,20 @@ footer a:hover { text-decoration: underline; }
   border-bottom: 1px solid var(--border);
   transition: background 120ms ease;
 }
-#search-results a:last-child {
+.pagefind-ui__result:last-child {
   border-bottom: none;
 }
-#search-results a:hover {
+.pagefind-ui__result:hover {
   background: var(--accent-light);
 }
-#search-results a .result-title {
+.pagefind-ui__result-title {
   font-family: 'Noto Serif SC', serif;
   font-size: 15px;
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 4px;
 }
-#search-results a .result-excerpt {
+.pagefind-ui__result-excerpt {
   font-size: 12px;
   color: var(--ink-light);
   line-height: 1.5;
@@ -284,7 +284,7 @@ footer a:hover { text-decoration: underline; }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-#search-noresult {
+.pagefind-ui__noresults {
   padding: 16px 18px;
   font-size: 13px;
   color: var(--ink-light);
@@ -297,14 +297,83 @@ footer a:hover { text-decoration: underline; }
   <div class="kicker">HuggingFace Trending · AI 论文解读</div>
   <h1>每日论文</h1>
   <p class="subtitle">每天用 AI 解读最值得读的 HuggingFace 热门论文，用通俗易懂的中文呈现核心创新与关键结果。</p>
-  <div class="stats">已解读 200 篇论文</div>
+  <div class="stats">已解读 210 篇论文</div>
   <div id="search-wrap">
-    <input type="text" id="search-input" placeholder="搜索论文标题或关键词…" autocomplete="off">
     <div id="search-results"></div>
   </div>
 </header>
 <main>
-<div class="date-label">2026-04-05</div><div class="grid">
+<div class="date-label">2026-04-06</div><div class="grid">
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01168/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01168</span>
+            <h2 class="cn-title">S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models</h2>
+            <p class="en-title">S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models</p>
+            <p class="tagline">S0 Tuning: Zero-Overhead Adaptation of Hybrid Recurrent-Attention Models</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01193/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01193</span>
+            <h2 class="cn-title">极其简单的自蒸馏改进代码生成</h2>
+            <p class="en-title">Embarrassingly Simple Self-Distillation Improves Code Generation</p>
+            <p class="tagline">Apple研究院发现：AI不需要老师，自己生成代码自己训练，就能大幅提升编程能力——简单到令人惊讶！</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01194/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01194</span>
+            <h2 class="cn-title">AgentWatcher：基于规则的提示词注入监控器</h2>
+            <p class="en-title">AgentWatcher: A Rule-based Prompt Injection Monitor</p>
+            <p class="tagline">像给AI代理配备一位安全警卫，让恶意指令无处遁形——深入解读Penn State的最新AI安全研究</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01220/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01220</span>
+            <h2 class="cn-title">Universal YOCO for Efficient Depth Scaling</h2>
+            <p class="en-title">Universal YOCO for Efficient Depth Scaling</p>
+            <p class="tagline">Universal YOCO for Efficient Depth Scaling</p>
+            <span class="arrow">→</span>
+        </a></div><div class="date-label">2026-04-05</div><div class="grid">
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01221/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01221</span>
+            <h2 class="cn-title">HippoCamp: Benchmarking Contextual Agents on Personal Computers</h2>
+            <p class="en-title">HippoCamp: Benchmarking Contextual Agents on Personal Computers</p>
+            <p class="tagline">HippoCamp: Benchmarking Contextual Agents on Personal Computers</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01007/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01007</span>
+            <h2 class="cn-title">Omni-SimpleMem：让AI自己设计多模态终身记忆系统</h2>
+            <p class="en-title">Omni-SimpleMem: Autoresearch-Guided Discovery of Lifelong Multimodal Agent Memory</p>
+            <p class="tagline">AI不用人类教，自己发现比调参更有效的方法！LoCoMo基准提升411%，这项研究可能改变AI系统的设计方式</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.01987/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.01987</span>
+            <h2 class="cn-title">Curia-2：放射影像基础模型的自监督学习规模化新突破</h2>
+            <p class="en-title">Curia-2: Scaling Self-Supervised Learning for Radiology Foundation Models</p>
+            <p class="tagline">让AI像经验丰富的放射科医生一样理解CT和MRI影像——通过改进自监督学习策略，首次实现十亿参数级别的多模态医学影像AI模型</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.02045/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.02045</span>
+            <h2 class="cn-title">BidirLM: From Text to Omnimodal Bidirectional Encoders by Adapting and Composing Causal LLMs</h2>
+            <p class="en-title">BidirLM: From Text to Omnimodal Bidirectional Encoders by Adapting and Composing Causal LLMs</p>
+            <p class="tagline">BidirLM: From Text to Omnimodal Bidirectional Encoders by Adapting and Composing Causal LLMs</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.02048/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.02048</span>
+            <h2 class="cn-title">Jagle: Building a Large-Scale Japanese Multimodal Post-Training Dataset for Vision-Language Models</h2>
+            <p class="en-title">Jagle: Building a Large-Scale Japanese Multimodal Post-Training Dataset for Vision-Language Models</p>
+            <p class="tagline">Jagle: Building a Large-Scale Japanese Multimodal Post-Training Dataset for Vision-Language Models</p>
+            <span class="arrow">→</span>
+        </a>
+        <a class="card" href="https://noame20.github.io/daily-papers/2604.02280/bundle.html" target="_blank" rel="noopener">
+            <span class="paper-id">#2604.02280</span>
+            <h2 class="cn-title">AI 也需要遗忘？让智能体学会选择性记忆</h2>
+            <p class="en-title">Novel Memory Forgetting Techniques for Autonomous AI Agents: Balancing Relevance and Efficiency</p>
+            <p class="tagline">为什么 AI 记太多反而变笨？这篇论文告诉你：适度的遗忘，反而能让 AI 变得更可靠、更快速。</p>
+            <span class="arrow">→</span>
+        </a>
         <a class="card" href="https://noame20.github.io/daily-papers/2604.01202/bundle.html" target="_blank" rel="noopener">
             <span class="paper-id">#2604.01202</span>
             <h2 class="cn-title">Therefore I am. I Think</h2>
@@ -1707,7 +1776,7 @@ footer a:hover { text-decoration: underline; }
         </a></div>
 </main>
 <footer>
-  <span>由 OpenClaw AI 全自动生成 &nbsp;·&nbsp; 2026-04-05</span>
+  <span>由 OpenClaw AI 全自动生成 &nbsp;·&nbsp; 2026-04-06</span>
   <a href="https://github.com/noame20/daily-papers" target="_blank">GitHub</a>
 </footer>
 <script src="/daily-papers/pagefind/pagefind-ui.js"></script>
@@ -1719,7 +1788,7 @@ footer a:hover { text-decoration: underline; }
       showImages: false,
       resetStyles: false,
       excerptLength: 20,
-      bundlePath: "/daily-papers/pagefind",
+      bundlePath: "/daily-papers/pagefind/",
     });
   });
 </script>
