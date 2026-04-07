@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriAttention - 三角函数注意力机制 | 论文解读</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Noto Sans SC', sans-serif; }
+        html { scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+        .card-glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .glow { box-shadow: 0 0 40px rgba(59,130,246,0.3); }
+        .text-gradient { background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+        .progress-bar { background: linear-gradient(90deg, #3b82f6, #8b5cf6); }
+        .scroll-indicator { animation: bounce 2s infinite; }
+        @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(10px)} }
+        .comparison-bar { transition: width 1s ease-out; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .wave { animation: wave 2s ease-in-out infinite; }
+        @keyframes wave { 0%,100%{transform:rotate(0deg)} 25%{transform:rotate(20deg)} 75%{transform:rotate(-20deg)} }
+        .pulse-ring { animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+        @keyframes pulse-ring { 0%{transform:scale(0.8);opacity:1} 80%,100%{transform:scale(2);opacity:0} }
+        .node { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #3b82f6; }
+        .connection { position: absolute; height: 2px; background: linear-gradient(90deg, #3b82f6, #8b5cf6); transform-origin: left center; }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col items-center justify-center relative px-4 py-20">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="text-center max-w-4xl relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full card-glass mb-8">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span class="text-sm text-gray-300">2026年4月 | MIT & NVIDIA & 浙大</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="text-gradient">TriAttention</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-4">三角函数 KV 压缩的高效长推理机制</p>
+            <p class="text-lg text-gray-400 mb-12">Efficient Long Reasoning with Trigonometric KV Compression</p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <span class="px-4 py-2 rounded-lg card-glass text-sm">🚀 2.5倍吞吐量提升</span>
+                <span class="px-4 py-2 rounded-lg card-glass text-sm">💾 10.7倍内存压缩</span>
+                <span class="px-4 py-2 rounded-lg card-glass text-sm">🎯 精确度不损失</span>
+            </div>
+
+            <div class="scroll-indicator text-gray-400 mt-8">
+                <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+                向下滚动了解详情
+            </div>
+        </div>
+    </header>
+
+    <!-- 问题 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">🤔 这个研究要解决什么问题？</h2>
+                <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">想象你正在用AI做一道超难的数学题，AI需要"思考"好几万步才能给出答案...</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="card-glass rounded-2xl p-8 glow">
+                    <div class="text-5xl mb-6">📚</div>
+                    <h3 class="text-xl font-bold mb-4">长思维链的挑战</h3>
+                    <p class="text-gray-300 mb-4">当AI进行复杂推理时，需要生成成千上万token的思考过程。比如解一道数学竞赛题，AI可能需要推理几千步。</p>
+                    <div class="bg-red-500/20 border border-red-500/30 rounded-lg p-4">
+                        <p class="text-red-300 text-sm">这些思考过程中的每个词，都需要保存在AI的"记忆"里</p>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="text-5xl mb-6">💾</div>
+                    <h3 class="text-xl font-bold mb-4">内存爆炸问题</h3>
+                    <p class="text-gray-300 mb-4">保存这些"记忆"需要大量GPU显存。一块80GB的A100显卡，可能只够保存几千个词。</p>
+                    <div class="bg-orange-500/20 border border-orange-500/30 rounded-lg p-4">
+                        <p class="text-orange-300 text-sm">这就是著名的 KV Cache 内存瓶颈</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 问题可视化 -->
+            <div class="card-glass rounded-2xl p-8 mb-16">
+                <h4 class="text-lg font-bold mb-6 text-center">📊 AI推理时的内存消耗示意</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <span class="w-24 text-sm text-gray-400">输入问题</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-8 relative overflow-hidden">
+                            <div class="absolute left-0 top-0 h-full w-8 bg-blue-500/60 rounded-l-full flex items-center justify-center text-xs">词</div>
+                        </div>
+                        <span class="text-xs text-gray-500">tiny</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-24 text-sm text-gray-400">AI思考中</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-8 relative overflow-hidden">
+                            <div class="absolute left-0 top-0 h-full w-3/4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-l-full flex items-center justify-center text-xs">千千万万个词...</div>
+                        </div>
+                        <span class="text-xs text-gray-500">巨大!</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-24 text-sm text-gray-400">最终答案</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-8 relative overflow-hidden">
+                            <div class="absolute right-0 top-0 h-full w-4 bg-green-500/60 rounded-r-full flex items-center justify-center text-xs">答</div>
+                        </div>
+                        <span class="text-xs text-gray-500">tiny</span>
+                    </div>
+                </div>
+                <p class="text-center text-gray-400 text-sm mt-6">AI需要把整个思考过程都记在脑子里，但显存是有限的！</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心发现 Section -->
+    <section class="py-20 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">💡 核心发现：Q/K 集中现象</h2>
+                <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">研究者们有一个惊人的发现，这成为整个算法的关键！</p>
+            </div>
+
+            <!-- 对比图 -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="card-glass rounded-2xl p-8">
+                    <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <span class="text-red-400">❌</span> 之前的方法（后RoPE）
+                    </h4>
+                    <div class="relative h-48 mb-4 bg-gray-900/50 rounded-xl p-4">
+                        <svg viewBox="0 0 200 100" class="w-full h-full">
+                            <!-- Scattered points showing rotated queries -->
+                            <circle cx="30" cy="50" r="4" fill="#ef4444"/>
+                            <circle cx="45" cy="35" r="4" fill="#ef4444"/>
+                            <circle cx="55" cy="60" r="4" fill="#ef4444"/>
+                            <circle cx="70" cy="25" r="4" fill="#ef4444"/>
+                            <circle cx="85" cy="45" r="4" fill="#ef4444"/>
+                            <circle cx="100" cy="30" r="4" fill="#ef4444"/>
+                            <circle cx="115" cy="55" r="4" fill="#ef4444"/>
+                            <circle cx="130" cy="20" r="4" fill="#ef4444"/>
+                            <circle cx="145" cy="40" r="4" fill="#ef4444"/>
+                            <circle cx="160" cy="65" r="4" fill="#ef4444"/>
+                            <circle cx="175" cy="35" r="4" fill="#ef4444"/>
+                            <text x="100" y="95" fill="#6b7280" font-size="8" text-anchor="middle">Query向量分散在各处</text>
+                        </svg>
+                    </div>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• Query向量随位置旋转</li>
+                        <li>• 只能观察最近的几个query</li>
+                        <li>• 重要的key可能被错误删除</li>
+                    </ul>
+                </div>
+
+                <div class="card-glass rounded-2xl p-8 glow">
+                    <h4 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <span class="text-green-400">✓</span> TriAttention（前RoPE）
+                    </h4>
+                    <div class="relative h-48 mb-4 bg-gray-900/50 rounded-xl p-4">
+                        <svg viewBox="0 0 200 100" class="w-full h-full">
+                            <!-- Concentrated points -->
+                            <circle cx="100" cy="50" r="6" fill="#3b82f6" opacity="0.3"/>
+                            <circle cx="100" cy="50" r="4" fill="#60a5fa"/>
+                            <circle cx="102" cy="48" r="3" fill="#60a5fa"/>
+                            <circle cx="98" cy="52" r="3" fill="#60a5fa"/>
+                            <circle cx="101" cy="51" r="2.5" fill="#60a5fa"/>
+                            <circle cx="99" cy="49" r="2.5" fill="#60a5fa"/>
+                            <circle cx="103" cy="50" r="2" fill="#60a5fa"/>
+                            <circle cx="97" cy="51" r="2" fill="#60a5fa"/>
+                            <circle cx="100" cy="53" r="2" fill="#60a5fa"/>
+                            <circle cx="100" cy="47" r="2" fill="#60a5fa"/>
+                            <text x="100" y="95" fill="#60a5fa" font-size="8" text-anchor="middle">Query向量高度集中</text>
+                        </svg>
+                    </div>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li>• Query/Key围绕固定中心聚集</li>
+                        <li>• 这种集中是稳定的、可预测的</li>
+                        <li>• 能准确判断哪些key重要</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 三角函数公式 -->
+            <div class="card-glass rounded-2xl p-8 mb-16">
+                <h4 class="text-lg font-bold mb-6 text-center">🔮 三角函数系列：预测注意力模式</h4>
+                <div class="bg-gray-900/50 rounded-xl p-6 mb-6 overflow-x-auto">
+                    <p class="text-center text-xl font-mono text-blue-300">
+                        S<sub>trig</sub>(k,Δ) = Σ<sub>f</sub> ||E[q<sub>f</sub>]|| · ||k<sub>f</sub>|| · cos(ω<sub>f</sub>Δ + φ<sub>f</sub>)
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-blue-500/10 rounded-lg p-4">
+                        <p class="text-blue-300 font-bold mb-2">E[q<sub>f</sub>]</p>
+                        <p class="text-gray-400">Query的中心点位置</p>
+                    </div>
+                    <div class="bg-purple-500/10 rounded-lg p-4">
+                        <p class="text-purple-300 font-bold mb-2">ω<sub>f</sub></p>
+                        <p class="text-gray-400">RoPE旋转频率</p>
+                    </div>
+                    <div class="bg-pink-500/10 rounded-lg p-4">
+                        <p class="text-pink-300 font-bold mb-2">Δ</p>
+                        <p class="text-gray-400">Query-Key距离</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 方法论 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">⚙️ TriAttention 工作流程</h2>
+                <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">算法是如何做出决策的？让我们一步步来看</p>
+            </div>
+
+            <!-- 流程图 -->
+            <div class="card-glass rounded-2xl p-8 mb-16">
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-500/20 flex items-center justify-center text-2xl">📊</div>
+                        <h4 class="font-bold mb-2">Step 1</h4>
+                        <p class="text-sm text-gray-400">离线校准：计算Q/K的中心点</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-500/20 flex items-center justify-center text-2xl">📐</div>
+                        <h4 class="font-bold mb-2">Step 2</h4>
+                        <p class="text-sm text-gray-400">三角函数评分：预测每个key的重要性</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-pink-500/20 flex items-center justify-center text-2xl">📏</div>
+                        <h4 class="font-bold mb-2">Step 3</h4>
+                        <p class="text-sm text-gray-400">归一化评分：结合key的范数信息</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center text-2xl">✂️</div>
+                        <h4 class="font-bold mb-2">Step 4</h4>
+                        <p class="text-sm text-gray-400">保留Top-B：只保留最重要的key</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 评分函数详解 -->
+            <div class="card-glass rounded-2xl p-8 mb-16">
+                <h4 class="text-lg font-bold mb-6">🎯 关键评分公式</h4>
+                <div class="space-y-6">
+                    <div class="bg-gray-900/50 rounded-xl p-6">
+                        <p class="text-sm text-gray-400 mb-2">最终得分 = 三角函数得分 + 范数得分</p>
+                        <p class="text-xl font-mono text-green-300">S(k,Δ) = S<sub>trig</sub>(k,Δ) + S<sub>norm</sub>(k)</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-500/10 rounded-xl p-6">
+                            <h5 class="font-bold text-blue-300 mb-3">三角函数得分 S<sub>trig</sub></h5>
+                            <p class="text-sm text-gray-300 mb-3">基于Query-Key距离的偏好</p>
+                            <ul class="text-xs text-gray-400 space-y-1">
+                                <li>• 距离近的key得分高 → 局部注意力</li>
+                                <li>• 距离远的key得分高 → 注意力sink</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-500/10 rounded-xl p-6">
+                            <h5 class="font-bold text-purple-300 mb-3">范数得分 S<sub>norm</sub></h5>
+                            <p class="text-sm text-gray-300 mb-3">考虑key向量的长度</p>
+                            <ul class="text-xs text-gray-400 space-y-1">
+                                <li>• 长向量 → 更重要的语义</li>
+                                <li>• 短向量 → 可能不太重要</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实验结果 Section -->
+    <section class="py-20 px-4 bg-black/20">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">📈 实验结果</h2>
+                <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">在数学推理任务上的表现</p>
+            </div>
+
+            <!-- AIME25结果 -->
+            <div class="card-glass rounded-2xl p-8 mb-12">
+                <h4 class="text-lg font-bold mb-6">🏆 AIME 2025 数学竞赛题</h4>
+                <p class="text-gray-400 text-sm mb-6">Qwen3-8B模型，32K token生成长度</p>
+
+                <div class="space-y-6">
+                    <!-- Full Attention -->
+                    <div class="flex items-center gap-4">
+                        <span class="w-28 text-sm text-gray-400">Full Attention</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-10 relative overflow-hidden">
+                            <div class="comparison-bar h-full bg-gradient-to-r from-gray-500 to-gray-400 rounded-full flex items-center justify-end pr-4" style="width: 100%">
+                                <span class="text-sm font-bold">40.8%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SnapKV -->
+                    <div class="flex items-center gap-4">
+                        <span class="w-28 text-sm text-gray-400">SnapKV</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-10 relative overflow-hidden">
+                            <div class="comparison-bar h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full flex items-center justify-end pr-4" style="width: 49%">
+                                <span class="text-sm font-bold">20.0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- R-KV -->
+                    <div class="flex items-center gap-4">
+                        <span class="w-28 text-sm text-gray-400">R-KV</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-10 relative overflow-hidden">
+                            <div class="comparison-bar h-full bg-gradient-to-r from-red-500 to-red-400 rounded-full flex items-center justify-end pr-4" style="width: 43%">
+                                <span class="text-sm font-bold">17.5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TriAttention -->
+                    <div class="flex items-center gap-4">
+                        <span class="w-28 text-sm text-blue-400 font-bold">TriAttention</span>
+                        <div class="flex-1 bg-gray-700/50 rounded-full h-10 relative overflow-hidden">
+                            <div class="comparison-bar h-full progress-bar rounded-full flex items-center justify-end pr-4" style="width: 81%">
+                                <span class="text-sm font-bold text-white">32.9%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
+                    <p class="text-green-300 text-sm">🎉 TriAttention在相同准确率下，速度是Full Attention的<strong>2.5倍</strong>！</p>
+                </div>
+            </div>
+
+            <!-- 效率对比 -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="card-glass rounded-2xl p-6 text-center">
+                    <div class="text-5xl font-bold text-blue-400 mb-2">2.5×</div>
+                    <p class="text-gray-400">吞吐量提升</p>
+                    <p class="text-sm text-gray-500 mt-2">相同精度下</p>
+                </div>
+                <div class="card-glass rounded-2xl p-6 text-center">
+                    <div class="text-5xl font-bold text-purple-400 mb-2">10.7×</div>
+                    <p class="text-gray-400">内存压缩</p>
+                    <p class="text-sm text-gray-500 mt-2">KV Cache大小</p>
+                </div>
+                <div class="card-glass rounded-2xl p-6 text-center">
+                    <div class="text-5xl font-bold text-green-400 mb-2">≈100%</div>
+                    <p class="text-gray-400">精度保持</p>
+                    <p class="text-sm text-gray-500 mt-2">对比Full Attention</p>
+                </div>
+            </div>
+
+            <!-- MATH500对比 -->
+            <div class="card-glass rounded-2xl p-8 mb-12">
+                <h4 class="text-lg font-bold mb-6">📊 MATH 500 数据集（KV预算1024）</h4>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <p class="text-sm text-gray-400 mb-2">Full Attention</p>
+                        <p class="text-2xl font-bold">69.6%</p>
+                    </div>
+                    <div class="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <p class="text-sm text-gray-400 mb-2">SnapKV</p>
+                        <p class="text-2xl font-bold text-orange-400">49.2%</p>
+                    </div>
+                    <div class="bg-gray-900/50 rounded-xl p-4 text-center">
+                        <p class="text-sm text-gray-400 mb-2">R-KV</p>
+                        <p class="text-2xl font-bold text-red-400">46.4%</p>
+                    </div>
+                    <div class="bg-blue-500/20 rounded-xl p-4 text-center border border-blue-500/30">
+                        <p class="text-sm text-blue-400 mb-2">TriAttention</p>
+                        <p class="text-2xl font-bold text-blue-300">68.4%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 创新点 Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">🌟 核心创新点</h2>
+                <p class="text-gray-400 text-center mb-16 max-w-2xl mx-auto">TriAttention的关键突破</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 text-xl">1</div>
+                        <div>
+                            <h4 class="font-bold mb-2">Pre-RoPE空间分析</h4>
+                            <p class="text-gray-400 text-sm">首次发现Q/K向量在应用位置编码前高度集中在固定中心点，这个特性在所有Transformer架构中普遍存在且稳定。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0 text-xl">2</div>
+                        <div>
+                            <h4 class="font-bold mb-2">三角函数级数预测</h4>
+                            <p class="text-gray-400 text-sm">利用Q/K中心点，通过三角函数级数准确预测注意力随距离的分布模式，实现可解释的KV重要性评估。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0 text-xl">3</div>
+                        <div>
+                            <h4 class="font-bold mb-2">自适应权重机制</h4>
+                            <p class="text-gray-400 text-sm">使用Mean Resultant Length (MRL)自动平衡三角函数得分和范数得分的权重，适应不同注意力头部的特性。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-glass rounded-2xl p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 text-xl">4</div>
+                        <div>
+                            <h4 class="font-bold mb-2">跨域泛化能力</h4>
+                            <p class="text-gray-400 text-sm">在校准数据上学习到的Q/K统计特性可以在不同领域（数学、代码、聊天）之间迁移，无需针对每个任务重新校准。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 总结 Section -->
+    <section class="py-20 px-4 bg-black/20">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">🎯 一句话总结</h2>
+            </div>
+
+            <div class="card-glass rounded-2xl p-8 mb-12 glow">
+                <p class="text-xl md:text-2xl text-gray-200 leading-relaxed">
+                    TriAttention通过发现Q/K向量在<strong class="text-blue-400">位置编码前</strong>会围绕固定中心<strong class="text-purple-400">高度集中</strong>这一现象，利用<strong class="text-pink-400">三角函数级数</strong>准确预测每个记忆碎片的重要性，在保持AI推理精度的同时，实现了<strong class="text-green-400">2.5倍速度提升</strong>和<strong class="text-orange-400">10.7倍内存节省</strong>。
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="https://github.com/WeianMao/triattention" target="_blank" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub源码
+                </a>
+                <a href="https://arxiv.org/abs/2604.04921" target="_blank" class="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    原始论文
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="max-w-6xl mx-auto text-center text-gray-500 text-sm">
+            <p>论文：TriAttention: Efficient Long Reasoning with Trigonometric KV Compression</p>
+            <p class="mt-2">作者：Weian Mao, Xi Lin, Wei Huang, Yuxin Xie, Tianfu Fu et al. (MIT & NVIDIA & 浙大)</p>
+            <p class="mt-4">本页面由AI生成，仅供学习参考</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Animate comparison bars on scroll
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.comparison-bar');
+                    bars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => bar.style.width = width, 100);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('section').forEach(el => barObserver.observe(el));
+    </script>
+</body>
+</html>
