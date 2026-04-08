@@ -1,0 +1,5 @@
+{
+  "cn_title": "BodhiPromptShield：LLM/VLM 智能体中的隐私传播抑制",
+  "tagline": "当你的AI助手不小心泄露了你的个人信息时， BodhiPromptShield 如何在事前就截住隐私泄露？一篇让你秒懂大模型隐私保护核心思路的论文解读。",
+  "title": "BodhiPromptShield: Pre-Inference Prompt Mediation for Suppressing Privacy Propagation in LLM/VLM Agents"
+}
