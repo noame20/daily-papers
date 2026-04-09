@@ -1,0 +1,5 @@
+{
+  "cn_title": "TC-AE：解锁深度压缩自动编码器的Token容量",
+  "tagline": "如何让AI在把图片压到极小的同时，仍然能生成高清图片？TC-AE用两步压缩+自监督学习攻克了这个难题",
+  "title": "TC-AE: Unlocking Token Capacity for Deep Compression Autoencoders"
+}
