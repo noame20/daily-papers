@@ -1,0 +1,5 @@
+{
+  "cn_title": "Flux Attention：让大语言模型更快速处理长文本",
+  "tagline": "通过智能路由器动态分配注意力，FluxAttention让AI在长上下文理解任务上实现高达2.8倍的加速，同时保持回答质量不下降。",
+  "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference"
+}
