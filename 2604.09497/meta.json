@@ -1,0 +1,5 @@
+{
+  "cn_title": "BERT即评委：一种比传统方法更 robust 的大语言模型评估新方案",
+  "tagline": "告别死板的格式匹配！用BERT当'法官'，既能看懂答案意思，又比大模型评估快100倍",
+  "title": "BERT-as-a-Judge: A Robust Alternative to Lexical Methods for Efficient Reference-Based LLM Evaluation"
+}
