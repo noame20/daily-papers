@@ -1,0 +1,1289 @@
+{
+  "papers": {
+    "2603.24589": {
+      "title": "YingMusic-Singer: Controllable Singing Voice Synthesis with Flexible Lyric Manipulation and Annotation-free Melody Guidance",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:06:03",
+      "cn_title": "YingMusic-Singer：可控演唱声音合成",
+      "tagline": "想怎么唱就怎么唱！AI让你随意改歌词，还能完美保持原有旋律"
+    },
+    "2603.24580": {
+      "title": "Retrieval Improvements Do Not Guarantee Better Answers: A Study of RAG for AI Policy QA",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:10:08",
+      "cn_title": "检索改进 ≠ 更好的答案：RAG在AI政策问答中的应用研究",
+      "tagline": "一项颠覆认知的研究发现：即使AI的"
+    },
+    "2603.24533": {
+      "title": "UI-Voyager: A Self-Evolving GUI Agent Learning via Failed Experience",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:17:21",
+      "cn_title": "UI-Voyager：一种通过失败经验自我进化的GUI智能体学习算法",
+      "tagline": "让AI从失败中学习！仅用40亿参数超越人类水平，手机界面操控智能体重大突破"
+    },
+    "2603.24506": {
+      "title": "Toward Physically Consistent Driving Video World Models under Challenging Trajectories",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:23:15",
+      "cn_title": "在挑战性轨迹下实现物理一致的驾驶视频世界模型",
+      "tagline": "PhyGenesis：让自动驾驶在「危险驾驶」时也能生成真实可信的视频，一篇让AI学会遵守物理定律的论文解读"
+    },
+    "2603.24472": {
+      "title": "Why Does Self-Distillation (Sometimes) Degrade the Reasoning Capability of LLMs?",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:29:36",
+      "cn_title": "为什么自蒸馏（有时）会降低大语言模型的推理能力？",
+      "tagline": "AI训练新发现：让模型模仿标准答案反而让它变笨了？一篇带你了解这个反直觉的研究"
+    },
+    "2603.24458": {
+      "title": "OmniWeaving: Towards Unified Video Generation with Free-form Composition and Reasoning",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:36:16",
+      "cn_title": "OmniWeaving：迈向统一视频生成与自由组合推理",
+      "tagline": "让AI学会"
+    },
+    "2603.24440": {
+      "title": "CUA-Suite: Massive Human-annotated Video Demonstrations for Computer-Use Agents",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:46:41",
+      "cn_title": "CUA-SUITE：让AI学会像人类一样操作电脑",
+      "tagline": "55000小时真人操作视频数据集诞生！揭秘AI如何学习操控Photoshop、3D建模软件等87种桌面应用"
+    },
+    "2603.24329": {
+      "title": "GameplayQA: A Benchmarking Framework for Decision-Dense POV-Synced Multi-Video Understanding of 3D Virtual Agents",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 12:52:43",
+      "cn_title": "GameplayQA：3D虚拟智能体决策密集型多视角视频理解基准",
+      "tagline": "AI能在游戏里像人类一样看懂队友配合吗？来看看这个让全球最强AI都头疼的测试基准！"
+    },
+    "2603.24157": {
+      "title": "CarePilot: A Multi-Agent Framework for Long-Horizon Computer Task Automation in Healthcare",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 13:00:52",
+      "cn_title": "CarePilot：多智能体框架用于医疗保健领域的长期计算机任务自动化",
+      "tagline": "让AI像医疗软件专家一样完成复杂任务——点击了解这项革命性研究如何让医生工作更轻松"
+    },
+    "2603.23906": {
+      "title": "GenMask: Adapting DiT for Segmentation via Direct Mask",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 13:08:07",
+      "cn_title": "GenMask：用扩散模型直接生成分割掩码",
+      "tagline": "告别繁琐的特征提取！GenMask让分割任务和图像生成共用一个AI模型，通过特殊的噪声采样策略，实现更简单、更强大的分割效果。"
+    },
+    "2603.23638": {
+      "title": "Can LLM Agents Be CFOs? A Benchmark for Resource Allocation in Dynamic Enterprise Environments",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-26 13:48:27",
+      "cn_title": "LLM智能体能当CFO吗？",
+      "tagline": "一项评估AI在动态企业环境中进行长期资源分配能力的突破性研究"
+    },
+    "2603.23500": {
+      "title": "UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 18:25:42",
+      "cn_title": "UniGRPO：统一策略优化，让AI学会先思考后作画",
+      "tagline": "这篇论文让AI的"
+    },
+    "2603.23499": {
+      "title": "DA-Flow: Degradation-Aware Optical Flow Estimation with Diffusion Models",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 18:33:25",
+      "cn_title": "DA-Flow：让AI在模糊视频中也能精准捕捉运动",
+      "tagline": "扩散模型跨界来帮忙！即使视频模糊、噪点多，AI也能准确估计物体运动轨迹"
+    },
+    "2603.23497": {
+      "title": "WildWorld: A Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 18:41:04",
+      "cn_title": "WildWorld：用游戏数据教AI理解",
+      "tagline": "一篇来自怪物猎人游戏的AI研究论文，教你如何用数据让机器学会"
+    },
+    "2603.23495": {
+      "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 18:48:40",
+      "cn_title": "视觉按需调度（VISOR）：让AI",
+      "tagline": "不再粗暴压缩图片，而是智能分配注意力——这篇论文让大型多模态模型既快又准，看完这篇你也能给同学讲解！"
+    },
+    "2603.23489": {
+      "title": "AgentRVOS: Reasoning over Object Tracks for Zero-Shot Referring Video Object Segmentation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 18:59:11",
+      "cn_title": "AgentRVOS：让AI在视频中",
+      "tagline": "当两个AI联手合作，一起来看视频找东西！SAM3负责"
+    },
+    "2603.23488": {
+      "title": "One View Is Enough! Monocular Training for In-the-Wild Novel View Generation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 19:02:17",
+      "cn_title": "一张图就够了！OVIE：野外单目新视角生成",
+      "tagline": "告别多视角数据依赖！用单张普通照片就能训练AI生成任意角度的新视图，在3000万张图片上学习，推理速度比最快方法快600倍"
+    },
+    "2603.23483": {
+      "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 19:06:01",
+      "cn_title": "SpecEyes：用「先猜后验」让AI看图回答快3倍的秘密",
+      "tagline": "高中生也能看懂的多模态AI加速黑科技！通过「快思慢答」机制，让AI既快又准地回答图片问题"
+    },
+    "2603.23481": {
+      "title": "VTAM: Video-Tactile-Action Models for Complex Physical Interaction Beyond VLAs",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 19:09:36",
+      "cn_title": "VTAM：让机器人",
+      "tagline": "薯片抓取成功率90%吊打仅靠摄像头的0%——这篇论文让机器人拥有了像人手指尖一样的触觉感知"
+    },
+    "2603.23478": {
+      "title": "UniFunc3D: Unified Active Spatial-Temporal Grounding for 3D Functionality Segmentation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 19:12:49",
+      "cn_title": "UniFunc3D：统一主动空间-时间定位的3D功能分割技术",
+      "tagline": "让AI像人类一样「看」懂3D世界中的物品功能！点击了解如何用大模型实现精准的开关、把手、旋钮定位。"
+    },
+    "2603.23471": {
+      "title": "Regulating AI Agents",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-25 19:16:05",
+      "cn_title": "AI智能体的监管治理",
+      "tagline": "当AI学会自主行动，全球最严AI法规为何还是管不住它？一篇论文带你搞懂AI智能体治理的核心挑战。"
+    },
+    "2603.20192": {
+      "title": "LumosX: Relate Any Identities with Their Attributes for Personalized Video Generation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 11:58:20",
+      "cn_title": "LumosX：关联身份与属性实现个性化视频生成",
+      "tagline": "让AI根据你的喜好定制视频！输入人物照片，它就能生成这个人做任何动作的视频，就像私人导演一样。"
+    },
+    "2603.20184": {
+      "title": "Kolmogorov-Arnold causal generative models",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-24 01:18:01",
+      "cn_title": "Kolmogorov-Arnold 因果生成模型 (KaCGM)",
+      "tagline": "让 AI 的思考过程变得透明可解释！用「乐高积木」的方式拆解复杂函数，看懂 AI 如何做出每一个决策。专为高中生设计，通俗易懂！"
+    },
+    "2603.20169": {
+      "title": "EgoForge: Goal-Directed Egocentric World Simulator",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 12:04:30",
+      "cn_title": "EgoForge：目标导向的自我中心世界模拟器",
+      "tagline": "AI视角的"
+    },
+    "2603.20155": {
+      "title": "arXiv Query: search_query=&amp;id_list=2603.20155&amp;start=0&amp;max_results=10",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 12:16:48",
+      "cn_title": "超越单个Token：基于离散最大均值差异的离散扩散模型蒸馏",
+      "tagline": "让AI生成图片又快又准！用数学方法把大模型"
+    },
+    "2603.19809": {
+      "title": "How Well Does Generative Recommendation Generalize?",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 12:21:28",
+      "cn_title": "生成式推荐究竟在",
+      "tagline": "AI推荐系统也会"
+    },
+    "2603.19708": {
+      "title": "WorldAgents: Can Foundation Image Models be Agents for 3D World Models?",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 12:28:06",
+      "cn_title": "WorldAgents：基础图像模型能否成为3D世界模型的智能体？",
+      "tagline": "用AI图像模型构建3D虚拟世界！输入一张照片，AI就能创造一个可交互的3D空间。"
+    },
+    "2603.19685": {
+      "title": "arXiv Query: search_query=&amp;id_list=2603.19685&amp;start=0&amp;max_results=10",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 18:24:49",
+      "cn_title": "子目标驱动框架：提升长时程LLM智能体性能",
+      "tagline": "让AI Agent不再迷路！像人类一样把复杂任务拆成小步骤，每一步都能稳稳完成。"
+    },
+    "2603.19635": {
+      "title": "BEAVER: A Training-Free Hierarchical Prompt Compression Method via Structure-Aware Page Selection",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 18:32:52",
+      "cn_title": "BEAVER：无训练层次化提示压缩方法",
+      "tagline": "长文本秒变精华！AI不用重新训练就能自动压缩Prompt，省Token还保持效果。"
+    },
+    "2603.19598": {
+      "title": "FlowScene: Style-Consistent Indoor Scene Generation with Multimodal Graph Rectified Flow",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 18:39:47",
+      "cn_title": "FlowScene：多模态图校正流实现风格一致的室内场景生成",
+      "tagline": "装修效果图AI生成！输入草图和风格描述，整套室内设计图即刻呈现。"
+    },
+    "2603.19500": {
+      "title": "Teaching an Agent to Sketch One Part at a Time",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 18:44:13",
+      "cn_title": "分步素描教学：让智能体逐部件学习绘画",
+      "tagline": "像教小孩画画一样教AI！把复杂图案拆成小部分，AI学得又快又好。"
+    },
+    "2603.19461": {
+      "title": "arXiv Query: search_query=&amp;id_list=2603.19461&amp;start=0&amp;max_results=10",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 18:50:59",
+      "cn_title": "超智能体（Hyperagents）",
+      "tagline": "AI也有\"领导\"了！多个AI组成团队，分工合作解决复杂问题，效率翻倍。"
+    },
+    "2603.19460": {
+      "title": "GeoLAN: Geometric Learning of Latent Explanatory Directions in Large Language Models",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-23 18:58:46",
+      "cn_title": "GeoLAN：大型语言模型潜在解释方向的几何学习",
+      "tagline": "打开AI的\"黑箱\"！用几何方法找出大模型思考过程中的关键方向，理解AI如何推理。"
+    },
+    "2603.19235": {
+      "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 13:06:32",
+      "cn_title": "生成模型理解空间：释放隐式3D先验用于场景理解",
+      "tagline": "AI看到2D图片就能理解3D结构！生成模型原来已掌握空间规律，这项研究帮你解锁。"
+    },
+    "2603.19234": {
+      "title": "arXiv Query: search_query=&amp;id_list=2603.19234&amp;start=0&amp;max_results=10",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 13:13:44",
+      "cn_title": "套娃高斯泼溅（Matryoshka Gaussian Splatting）",
+      "tagline": "3D重建提速10倍！像俄罗斯套娃一样分层处理，一张照片秒变3D模型。"
+    },
+    "2603.19232": {
+      "title": "Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 13:21:05",
+      "cn_title": "立方离散扩散：基于高维表示Token的离散视觉生成",
+      "tagline": "新型AI生图范式！把图片切成\"乐高积木\"来生成，突破传统扩散模型的限制。"
+    },
+    "2603.19231": {
+      "title": "MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 09:29:46",
+      "cn_title": "MonoArt：单目关节式3D重建的渐进式结构推理",
+      "tagline": "单张照片重建可动3D模型！看清关节结构，AI能从任意角度观察物体运动。"
+    },
+    "2603.19228": {
+      "title": "SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 15:11:39",
+      "cn_title": "SAMA：指令导向视频编辑的因子化语义锚定与运动对齐",
+      "tagline": "说话就能剪视频！告诉AI你想怎么改，它精准定位物体并调整运动轨迹。"
+    },
+    "2603.19227": {
+      "title": "Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 15:19:32",
+      "cn_title": "基于扩散的离散运动分词器：桥接语义与运动学条件",
+      "tagline": "教AI理解动作！把运动分解成\"词汇\"，让AI生成的动画动作更自然合理。"
+    },
+    "2603.19224": {
+      "title": "EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 15:25:00",
+      "cn_title": "EffectErase：联合视频对象删除与插入的高质量特效消除",
+      "tagline": "视频后期神器！一键移除或添加视频中的物体和特效，效果比美图秀秀还自然。"
+    },
+    "2603.19223": {
+      "title": "F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-21 23:49:48",
+      "cn_title": "F2LLM-v2：面向多语言世界的包容、高性能、高效嵌入",
+      "tagline": "懂100种语言的AI embedding模型！支持方言和低资源语言，全球沟通无障碍。"
+    },
+    "2603.19220": {
+      "title": "Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 00:02:19",
+      "cn_title": "Nemotron-Cascade 2：级联强化学习与多领域在线策略蒸馏的后训练LLM",
+      "tagline": "NVIDIA黑科技！大模型训练新方法，多阶段\"修炼\"让AI能力飙升。"
+    },
+    "2603.19217": {
+      "title": "LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 02:00:03",
+      "cn_title": "LVOmniBench：开创性的长音视频理解评测基准",
+      "tagline": "给AI的\"视力\"和\"听力\"打分！测试多模态大模型理解长视频的能力。"
+    },
+    "2603.19216": {
+      "title": "DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 02:00:15",
+      "cn_title": "DreamPartGen：协作潜空间去噪的语义锚定部件级3D生成",
+      "tagline": "想生成特定部件的3D模型？输入文字描述，AI精准生成你想要的零件或整体。"
+    },
+    "2603.19203": {
+      "title": "Tinted Frames: Question Framing Blinds Vision-Language Models",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 09:01:47",
+      "cn_title": "色彩框架：问题措辞如何影响视觉语言模型",
+      "tagline": "AI看图也会\"先入为主\"！同一个问题换种问法，AI答案可能完全不同，这很危险。"
+    },
+    "2603.19199": {
+      "title": "FASTER: Rethinking Real-Time Flow VLAs",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 09:09:07",
+      "cn_title": "FASTER：重新思考实时流式视觉-语言-动作模型",
+      "tagline": "机器人反应太慢？重新设计算法让AI能实时看视频做决策，速度大幅提升。"
+    },
+    "2603.19173": {
+      "title": "SOL-ExecBench: Speed-of-Light Benchmarking for Real-World GPU Kernels Against Hardware Limits",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 09:16:25",
+      "cn_title": "SOL-ExecBench：GPU内核与硬件极限的光速基准测试",
+      "tagline": "GPU性能有多少水分？用\"光速基准\"测试真实性能，找出硬件瓶颈在哪里。"
+    },
+    "2603.19146": {
+      "title": "D5P4: Partition Determinantal Point Process for Diversity in Parallel Discrete Diffusion Decoding",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-22 09:27:40",
+      "cn_title": "D5P4：用于并行离散扩散解码多样性的划分行列式点过程",
+      "tagline": "AI生成图片不再千篇一律！新算法让多个生成结果各具特色，适合创意设计。"
+    },
+    "2603.25746": {
+      "title": "ShotStream: Streaming Multi-Shot Video Generation for Interactive Storytelling",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "ShotStream：流式多镜头视频生成技术",
+      "tagline": "让AI能够像导演一样，一镜接一镜地生成连贯的故事情节视频，支持实时交互！",
+      "generated_at": "2026-03-27 21:35:39"
+    },
+    "2603.25745": {
+      "title": "Less Gaussians, Texture More: 4K Feed-Forward Textured Splatting",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "更少的高斯球，更多的好纹理：4K前馈式纹理Splatting",
+      "tagline": "AI如何用更少的计算资源生成4K超高清3D场景？香港大学和Apple的研究员告诉你答案！",
+      "generated_at": "2026-03-28 11:05:54"
+    },
+    "2603.25744": {
+      "title": "MuRF: Unlocking the Multi-Scale Potential of Vision Foundation Models",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-28 11:14:07",
+      "cn_title": "MuRF: Unlocking the Multi-Scale Potential of Vision Foundation Models",
+      "tagline": "MuRF: Unlocking the Multi-Scale Potential of Vision Foundation Models"
+    },
+    "2603.25741": {
+      "title": "Vega: Learning to Drive with Natural Language Instructions",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-28 11:22:20",
+      "cn_title": "Vega: Learning to Drive with Natural Language Instructions",
+      "tagline": "Vega: Learning to Drive with Natural Language Instructions"
+    },
+    "2603.25739": {
+      "title": "MegaFlow: Zero-Shot Large Displacement Optical Flow",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "MegaFlow：零样本大位移光流估计",
+      "tagline": "让AI能像人眼一样精准追踪视频中快速移动的物体，无需额外训练就能举一反三！",
+      "generated_at": "2026-03-28 11:42:22"
+    },
+    "2603.25733": {
+      "title": "SlotVTG: Object-Centric Adapter for Generalizable Video Temporal Grounding",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "SlotVTG：视频时序定位的物体中心适配器",
+      "tagline": "让AI真正看懂视频而不是死记硬背——一种提升视频理解在新场景下泛化能力的轻量级方法",
+      "generated_at": "2026-03-28 11:47:30"
+    },
+    "2603.25730": {
+      "title": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-28 11:53:26",
+      "cn_title": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference",
+      "tagline": "PackForcing: Short Video Training Suffices for Long Video Sampling and Long Context Inference"
+    },
+    "2603.25728": {
+      "title": "PixelSmile: Toward Fine-Grained Facial Expression Editing",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "PixelSmile：精细化面部表情编辑",
+      "tagline": "让AI精准控制你的微表情 - 从微微微笑到开怀大笑，PixelSmile让表情编辑像调节音量一样简单",
+      "generated_at": "2026-03-28 12:03:43"
+    },
+    "2603.25723": {
+      "title": "Natural-Language Agent Harnesses",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-28 12:08:43",
+      "cn_title": "Natural-Language Agent Harnesses",
+      "tagline": "Natural-Language Agent Harnesses"
+    },
+    "2603.25718": {
+      "title": "Electrostatic Photoluminescence Tuning in All-Solid-State Perovskite Transistors",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-28 12:15:42",
+      "cn_title": "Electrostatic Photoluminescence Tuning in All-Solid-State Perovskite Transistors",
+      "tagline": "Electrostatic Photoluminescence Tuning in All-Solid-State Perovskite Transistors"
+    },
+    "2603.25717": {
+      "title": "Iterated beta integrals",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-28 12:22:45",
+      "cn_title": "Iterated beta integrals",
+      "tagline": "Iterated beta integrals"
+    },
+    "2603.25716": {
+      "title": "Out of Sight but Not Out of Mind: Hybrid Memory for Dynamic Video World Models",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "看不见但记得住：动态视频世界模型的混合记忆机制",
+      "tagline": "当人物走出画面再回来，AI如何记住他的模样？华中科大&快手团队提出革命性混合记忆范式，让视频生成既能记住静态背景、又能追踪动态主体的轨迹。",
+      "generated_at": "2026-03-28 12:28:27"
+    },
+    "2603.25715": {
+      "title": "Critical curve of two-matrix models ABBA, A{B,A}B and ABAB, Part I: Monte Carlo",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "两矩阵模型 ABBA、A{B,A}B 和 ABAB 的临界曲线",
+      "tagline": "用蒙特卡洛方法探索两个矩阵相互作用的稳定边界——就像找出汽车安全行驶的速度与弯道极限的组合！",
+      "generated_at": "2026-03-28 17:21:00"
+    },
+    "2603.25714": {
+      "title": "Spectrum of SL(2,R)-characters: the once-punctured torus case",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "SL(2,R)字符谱：单孔环面情形",
+      "tagline": "探索数学中的「混沌」与「秩序」：一个关于康托尔集的惊奇发现，带你走进拓扑学与动力系统的奇妙世界",
+      "generated_at": "2026-03-28 12:41:09"
+    },
+    "2603.25713": {
+      "title": "Compiling molecular ultrastructure into neural dynamics",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-29 12:26:53",
+      "cn_title": "Compiling molecular ultrastructure into neural dynamics",
+      "tagline": "Compiling molecular ultrastructure into neural dynamics"
+    },
+    "2603.25702": {
+      "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-29 12:33:06",
+      "cn_title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
+      "tagline": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation"
+    },
+    "2603.25685": {
+      "title": "Persistent Robot World Models: Stabilizing Multi-Step Rollouts via Reinforcement Learning",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "持久机器人世界模型：通过强化学习稳定多步预测",
+      "tagline": "让机器人学会在自己生成的「想象视频」中学习和改进，再也不会因为预测错误累积而「脑子一片空白」",
+      "generated_at": "2026-03-29 12:40:38"
+    },
+    "2603.25672": {
+      "title": "Can Users Specify Driving Speed? Bench2Drive-Speed: Benchmark and Baselines for Desired-Speed Conditioned Autonomous Driving",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-29 12:45:16",
+      "cn_title": "Can Users Specify Driving Speed? Bench2Drive-Speed: Benchmark and Baselines for Desired-Speed Conditioned Autonomous Driving",
+      "tagline": "Can Users Specify Driving Speed? Bench2Drive-Speed: Benchmark and Baselines for Desired-Speed Conditioned Autonomous Driving"
+    },
+    "2603.25562": {
+      "title": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-29 12:52:24",
+      "cn_title": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes",
+      "tagline": "Revisiting On-Policy Distillation: Empirical Failure Modes and Simple Fixes"
+    },
+    "2603.25551": {
+      "title": "Voxtral TTS",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "Voxtral TTS：用AI完美克隆你的声音",
+      "tagline": "仅需3秒声音样本，Mistral AI的黑科技就能复制出跟你一模一样的AI声音！支持9种语言，效果超越ElevenLabs。",
+      "generated_at": "2026-03-29 12:57:58"
+    },
+    "2603.25502": {
+      "title": "RealRestorer: Towards Generalizable Real-World Image Restoration with Large-Scale Image Editing Models",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "RealRestorer：基于大规模图像编辑模型的通用真实世界图像修复",
+      "tagline": "让AI学会修复真实世界的照片 — 开源模型首次超越闭源顶级图像修复AI",
+      "generated_at": "2026-03-29 13:05:26"
+    },
+    "2603.25489": {
+      "title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-29 13:14:33",
+      "cn_title": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties",
+      "tagline": "Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties"
+    },
+    "2603.25398": {
+      "title": "PMT: Plain Mask Transformer for Image and Video Segmentation with Frozen Vision Encoders",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-29 13:20:55",
+      "cn_title": "PMT: Plain Mask Transformer for Image and Video Segmentation with Frozen Vision Encoders",
+      "tagline": "PMT: Plain Mask Transformer for Image and Video Segmentation with Frozen Vision Encoders"
+    },
+    "2603.25388": {
+      "title": "Multimodal Dataset Distillation via Phased Teacher Models",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "多模态数据集蒸馏：基于阶段性教师模型的新方法",
+      "tagline": "如何用更少的数据训练出更强大的多模态AI模型？这篇论文告诉你答案！",
+      "generated_at": "2026-03-29 13:31:47"
+    },
+    "2603.25351": {
+      "title": "Image Rotation Angle Estimation: Comparing Circular-Aware Methods",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-30 10:02:07",
+      "cn_title": "Image Rotation Angle Estimation: Comparing Circular-Aware Methods",
+      "tagline": "Image Rotation Angle Estimation: Comparing Circular-Aware Methods"
+    },
+    "2603.26664": {
+      "title": "Learning to Commit: Generating Organic Pull Requests via Online Repository Memory",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 01:00:26",
+      "cn_title": "Learning to Commit: Generating Organic Pull Requests via Online Repository Memory",
+      "tagline": "Learning to Commit: Generating Organic Pull Requests via Online Repository Memory"
+    },
+    "2603.26193": {
+      "title": "MemCam: Memory-Augmented Camera Control for Consistent Video Generation",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 01:10:59",
+      "cn_title": "MemCam: Memory-Augmented Camera Control for Consistent Video Generation",
+      "tagline": "MemCam: Memory-Augmented Camera Control for Consistent Video Generation"
+    },
+    "2603.26049": {
+      "title": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 01:19:12",
+      "cn_title": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays",
+      "tagline": "Seeing Like Radiologists: Context- and Gaze-Guided Vision-Language Pretraining for Chest X-rays"
+    },
+    "2603.25804": {
+      "title": "RealChart2Code: Advancing Chart-to-Code Generation with Real Data and Multi-Task Evaluation",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 01:31:08",
+      "cn_title": "RealChart2Code: Advancing Chart-to-Code Generation with Real Data and Multi-Task Evaluation",
+      "tagline": "RealChart2Code: Advancing Chart-to-Code Generation with Real Data and Multi-Task Evaluation"
+    },
+    "2603.25802": {
+      "title": "LEMON: a foundation model for nuclear morphology in Computational Pathology",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "LEMON：病理学计算领域的细胞核形态基础模型",
+      "tagline": "让AI学会看细胞——癌症早筛的新武器！一个能自学的AI模型，从数百万张细胞图片中发现癌症的蛛丝马迹。",
+      "generated_at": "2026-03-31 01:38:23"
+    },
+    "2603.25727": {
+      "title": "Back to Basics: Revisiting ASR in the Age of Voice Agents",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "回归基础：重新审视语音智能时代的自动语音识别",
+      "tagline": "当你的语音助手\"听不懂\"你时，这篇论文揭示了为什么——以及科学家们提出的全新测试标准WildASR",
+      "generated_at": "2026-03-31 01:45:12"
+    },
+    "2603.25620": {
+      "title": "PICon: A Multi-Turn Interrogation Framework for Evaluating Persona Agent Consistency",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 01:51:31",
+      "cn_title": "PICon: A Multi-Turn Interrogation Framework for Evaluating Persona Agent Consistency",
+      "tagline": "PICon: A Multi-Turn Interrogation Framework for Evaluating Persona Agent Consistency"
+    },
+    "2603.25434": {
+      "title": "CoDeTT: A Context-Aware Decision Benchmark for Turn-Taking Evaluation",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 01:58:31",
+      "cn_title": "CoDeTT: A Context-Aware Decision Benchmark for Turn-Taking Evaluation",
+      "tagline": "CoDeTT: A Context-Aware Decision Benchmark for Turn-Taking Evaluation"
+    },
+    "2603.25319": {
+      "title": "MACRO: Advancing Multi-Reference Image Generation with Structured Long-Context Data",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "MACRO：利用结构化长上下文数据推进多参考图像生成",
+      "tagline": "当AI能同时看懂并融合10张图片，创意设计、艺术创作将迎来怎样的革命？",
+      "generated_at": "2026-03-31 02:03:09"
+    },
+    "2603.25268": {
+      "title": "CRAFT: Grounded Multi-Agent Coordination Under Partial Information",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 02:09:30",
+      "cn_title": "CRAFT: Grounded Multi-Agent Coordination Under Partial Information",
+      "tagline": "CRAFT: Grounded Multi-Agent Coordination Under Partial Information"
+    },
+    "2603.25226": {
+      "title": "WebTestBench: Evaluating Computer-Use Agents towards End-to-End Automated Web Testing",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "WebTestBench：让AI成为网页测试员",
+      "tagline": "当AI学会建网站，谁来帮我们检查网站有没有bug？这项研究告诉你答案",
+      "generated_at": "2026-03-31 06:06:44"
+    },
+    "2603.25158": {
+      "title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 05:17:26",
+      "cn_title": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills",
+      "tagline": "Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills"
+    },
+    "2603.25135": {
+      "title": "EgoXtreme: A Dataset for Robust Object Pose Estimation in Egocentric Views under Extreme Conditions",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "EgoXtreme：极端条件下的自视角物体姿态估计鲁棒数据集",
+      "tagline": "让AI在混乱的真实世界——低光、烟雾、运动模糊——中也能准确识别物体位置和朝向",
+      "generated_at": "2026-03-31 05:22:23"
+    },
+    "2603.25108": {
+      "title": "MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 05:29:38",
+      "cn_title": "MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning",
+      "tagline": "MSRL: Scaling Generative Multimodal Reward Modeling via Multi-Stage Reinforcement Learning"
+    },
+    "2603.25041": {
+      "title": "AdaLTM: Adaptive Layer-wise Task Vector Merging for Categorical Speech Emotion Recognition with ASR Knowledge Integration",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "AdaLTM：自适应层级任务向量融合用于语音情感识别",
+      "tagline": "不再一起训练！清华大学等团队提出新方法，像搭积木一样组装模型能力，让AI更懂你的情绪",
+      "generated_at": "2026-03-31 05:38:21"
+    },
+    "2603.25040": {
+      "title": "Intern-S1-Pro: Scientific Multimodal Foundation Model at Trillion Scale",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "Intern-S1-Pro：万亿参数科学多模态大模型",
+      "tagline": "全球首个万亿参数科学AI！能做化学实验、预测材料性质、分析DNA序列——这个AI科学家比很多人类专家还厉害",
+      "generated_at": "2026-03-31 05:43:44"
+    },
+    "2603.25011": {
+      "title": "Sparton: Fast and Memory-Efficient Triton Kernel for Learned Sparse Retrieval",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "Sparton：快速且内存高效的学习式稀疏检索 Triton 内核",
+      "tagline": "让 AI 检索模型跑得更快、占用更少内存的秘诀 - 了解一下这篇论文如何实现 4.8 倍速度提升和 12 倍内存降低",
+      "generated_at": "2026-03-31 05:51:56"
+    },
+    "2603.24961": {
+      "title": "Can MLLMs Read Students' Minds? Unpacking Multimodal Error Analysis in Handwritten Math",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "AI能读懂学生的数学错题吗？",
+      "tagline": "一篇关于人工智能如何分析中小学生手写数学错题的研究论文解读，带你了解当前AI在教育领域的真实能力与局限。",
+      "generated_at": "2026-03-31 05:58:25"
+    },
+    "2603.24943": {
+      "title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 06:02:50",
+      "cn_title": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol",
+      "tagline": "FinMCP-Bench: Benchmarking LLM Agents for Real-World Financial Tool Use under the Model Context Protocol"
+    },
+    "2603.24844": {
+      "title": "Reaching Beyond the Mode: RL for Distributional Reasoning in Language Models",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "超越单一答案：语言模型的分布式推理强化学习",
+      "tagline": "MIT 研究让 AI 不再只给一个答案！一次生成多个正确答案，覆盖率提升27%，算力节省50%——高中生也能看懂的前沿 AI 技术解读。",
+      "generated_at": "2026-03-31 06:13:13"
+    },
+    "2603.24840": {
+      "title": "Prune as You Generate: Online Rollout Pruning for Faster and Better RLVR",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "生成式剪枝：让AI学习数学题变得更快更聪明",
+      "tagline": "这篇论文教你如何用「边做边淘汰」的策略，让大型语言模型在做数学题时效率提升1.7倍，同时准确率更高！",
+      "generated_at": "2026-03-31 06:21:41"
+    },
+    "2603.24836": {
+      "title": "WAFT-Stereo: Warping-Alone Field Transforms for Stereo Matching",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 06:32:04",
+      "cn_title": "WAFT-Stereo: Warping-Alone Field Transforms for Stereo Matching",
+      "tagline": "WAFT-Stereo: Warping-Alone Field Transforms for Stereo Matching"
+    },
+    "2603.24800": {
+      "title": "Calibri: Enhancing Diffusion Transformers via Parameter-Efficient Calibration",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 06:38:12",
+      "cn_title": "Calibri: Enhancing Diffusion Transformers via Parameter-Efficient Calibration",
+      "tagline": "Calibri: Enhancing Diffusion Transformers via Parameter-Efficient Calibration"
+    },
+    "2603.24793": {
+      "title": "AVControl: Efficient Framework for Training Audio-Visual Controls",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "AVControl：音视频控制的高效训练框架",
+      "tagline": "像乐高积木一样搭建AI生成系统——每个小模块只做一件事，组合起来就能控制视频和音频的生成！",
+      "generated_at": "2026-03-31 06:43:32"
+    },
+    "2603.24755": {
+      "title": "SlopCodeBench: Benchmarking How Coding Agents Degrade Over Long-Horizon Iterative Tasks",
+      "pdf_downloaded": false,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "SlopCodeBench：编码AI如何在长时间迭代任务中逐渐「摆烂」",
+      "tagline": "最新研究揭秘：所有AI编程工具都会在迭代开发中「摆烂」，代码越来越乱、越来越冗余。看看你的AI助手是不是也这样？",
+      "generated_at": "2026-03-31 06:52:36"
+    },
+    "2603.28767": {
+      "title": "Gen-Searcher: Reinforcing Agentic Search for Image Generation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 13:28:00",
+      "cn_title": "Gen-Searcher: Reinforcing Agentic Search for Image Generation",
+      "tagline": "Gen-Searcher: Reinforcing Agentic Search for Image Generation"
+    },
+    "2603.28713": {
+      "title": "DreamLite: A Lightweight On-Device Unified Model for Image Generation and Editing",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "DreamLite：轻量级端侧统一模型 — 一个AI同时搞定图像生成与编辑",
+      "tagline": "只有3.9亿参数，手机上每秒生成1张图，却能媲美百亿参数大模型效果！字节跳动最新研究，用高中生也能懂的方式解读",
+      "generated_at": "2026-03-31 13:34:09"
+    },
+    "2603.28669": {
+      "title": "Superintelligence and Law",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "超智能与法律",
+      "tagline": "当AI比人类更聪明时，法律该如何应对？一篇带你看懂超级人工智能对未来法律体系的影响",
+      "generated_at": "2026-03-31 13:42:26"
+    },
+    "2603.28610": {
+      "title": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 13:51:27",
+      "cn_title": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning",
+      "tagline": "ResAdapt: Adaptive Resolution for Efficient Multimodal Reasoning"
+    },
+    "2603.28589": {
+      "title": "Towards a Medical AI Scientist",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "迈向医学AI科学家",
+      "tagline": "AI能像真正科学家一样做医学研究吗？这篇论文告诉你答案！",
+      "generated_at": "2026-03-31 13:58:09"
+    },
+    "2603.28554": {
+      "title": "Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "Hydra：一个模型，两种超能力",
+      "tagline": "一个视觉语言模型如何同时学会找资料和写文章？这项研究让AI文档理解更高效、更省内存！",
+      "generated_at": "2026-03-31 14:03:45"
+    },
+    "2603.28547": {
+      "title": "GEditBench v2: A Human-Aligned Benchmark for General Image Editing",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "GEditBench v2：通用图像编辑的人类对齐基准测试",
+      "tagline": "AI修图好不好谁说了算？GEditBench v2 用23种真实任务告诉你答案，还训出了一个比GPT-5.1还准的开源AI裁判！",
+      "generated_at": "2026-03-31 14:13:03"
+    },
+    "2603.28533": {
+      "title": "GraphWalker: Agentic Knowledge Graph Question Answering via Synthetic Trajectory Curriculum",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "GraphWalker：基于合成轨迹课程的智能知识图谱问答",
+      "tagline": "像智能探险家一样在大规模知识图谱中自主导航、推理找答案，AI如何学会举一反三？",
+      "generated_at": "2026-03-31 14:22:11"
+    },
+    "2603.28458": {
+      "title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 14:27:26",
+      "cn_title": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention",
+      "tagline": "HISA: Efficient Hierarchical Indexing for Fine-Grained Sparse Attention"
+    },
+    "2603.28376": {
+      "title": "Marco DeepResearch: Unlocking Efficient Deep Research Agents via Verification-Centric Design",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 14:39:11",
+      "cn_title": "Marco DeepResearch: Unlocking Efficient Deep Research Agents via Verification-Centric Design",
+      "tagline": "Marco DeepResearch: Unlocking Efficient Deep Research Agents via Verification-Centric Design"
+    },
+    "2603.28342": {
+      "title": "Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "Kernel-Smith：进化式内核优化的统一方案",
+      "tagline": "让 AI 学会像工程师一样优化 GPU 代码！这项来自上海 AI Lab 的研究让 AI 能通过进化算法自动生成比肩顶级程序员的 GPU 内核，性能超越 Claude-4.6 和 Gemini-3.0",
+      "generated_at": "2026-03-31 18:03:31"
+    },
+    "2603.28069": {
+      "title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 18:11:15",
+      "cn_title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens",
+      "tagline": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens"
+    },
+    "2603.28032": {
+      "title": "CARLA-Air: Fly Drones Inside a CARLA World -- A Unified Infrastructure for Air-Ground Embodied Intelligence",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "CARLA-Air：让无人机在虚拟城市中自由飞翔",
+      "tagline": "一个把无人机仿真和自动驾驶仿真合二为一的开源平台，让研究者在同一个虚拟城市中同时仿真无人机和自动驾驶汽车",
+      "generated_at": "2026-03-31 18:22:49"
+    },
+    "2603.27862": {
+      "title": "ImagenWorld: Stress-Testing Image Generation Models with Explainable Human Evaluation on Open-ended Real-World Tasks",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "ImagenWorld：用可解释评估揭秘AI图像生成能力",
+      "tagline": "3,600个测试用例、14个AI模型参加的压力测试！来看看你的AI绘画助手到底有多强",
+      "generated_at": "2026-03-31 18:30:27"
+    },
+    "2603.27813": {
+      "title": "MuSEAgent: A Multimodal Reasoning Agent with Stateful Experiences",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 18:36:48",
+      "cn_title": "MuSEAgent: A Multimodal Reasoning Agent with Stateful Experiences",
+      "tagline": "MuSEAgent: A Multimodal Reasoning Agent with Stateful Experiences"
+    },
+    "2603.27771": {
+      "title": "Emergent Social Intelligence Risks in Generative Multi-Agent Systems",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 18:44:57",
+      "cn_title": "Emergent Social Intelligence Risks in Generative Multi-Agent Systems",
+      "tagline": "Emergent Social Intelligence Risks in Generative Multi-Agent Systems"
+    },
+    "2603.27646": {
+      "title": "PRBench: End-to-end Paper Reproduction in Physics Research",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "PRBench：AI能完整复现物理论文吗？",
+      "tagline": "31位研究者测试了GPT、Kimi等最强AI，发现它们连一篇论文都复现不出来——这个结果让所有人都震惊了",
+      "generated_at": "2026-03-31 18:50:50"
+    },
+    "2603.27538": {
+      "title": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-03-31 18:58:37",
+      "cn_title": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens",
+      "tagline": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens"
+    },
+    "2603.27481": {
+      "title": "On Token's Dilemma: Dynamic MoE with Drift-Aware Token Assignment for Continual Learning of Large Vision Language Models",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "Token的困境：动态MoE与漂移感知Token分配用于大视觉语言模型的持续学习",
+      "tagline": "大模型也会「喜新厌旧」？看研究者如何用Token困境的洞察，让AI学会不断进步而不遗忘！",
+      "generated_at": "2026-03-31 19:06:55"
+    },
+    "2603.27183": {
+      "title": "Communicating about Space: Language-Mediated Spatial Integration Across Partial Views",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "当AI开始讨论空间：语言介导的空间跨视角整合研究",
+      "tagline": "两个AI分别从不同角度看房间，它们能像人类一样通过对话整合信息吗？探索多模态大语言模型的空间交流能力。",
+      "generated_at": "2026-03-31 20:10:34"
+    },
+    "2603.27164": {
+      "title": "daVinci-LLM:Towards the Science of Pretraining",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27064": {
+      "title": "ChartNet: A Million-Scale, High-Quality Multimodal Dataset for Robust Chart Understanding",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27048": {
+      "title": "MOOZY: A Patient-First Foundation Model for Computational Pathology",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27001": {
+      "title": "PHONOS: PHOnetic Neutralization for Online Streaming Applications",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.26658": {
+      "title": "Zero-Shot Depth from Defocus",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.26639": {
+      "title": "Make Geometry Matter for Spatial Reasoning",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.26610": {
+      "title": "Think over Trajectories: Leveraging Video Generation to Reconstruct GPS Trajectories from Cellular Signaling",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.26546": {
+      "title": "AutoWeather4D: Autonomous Driving Video Weather Conversion via G-Buffer Dual-Pass Editing",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.26362": {
+      "title": "HandVQA: Diagnosing and Improving Fine-Grained Spatial Reasoning about Hands in Vision-Language Models",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.26263": {
+      "title": "DRUM: Diffusion-based Raydrop-aware Unpaired Mapping for Sim2Real LiDAR Segmentation",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.25985": {
+      "title": "JRM: Joint Reconstruction Model for Multiple Objects without Alignment",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.25887": {
+      "title": "World Reasoning Arena",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.28766": {
+      "title": "HandX: Scaling Bimanual Motion and Interaction Generation",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "HandX：规模化双手运动与交互生成",
+      "tagline": "让AI学会像人类一样灵活控制双手！一个能生成精细手指动作和双手配合的AI系统",
+      "generated_at": "2026-04-01 00:21:37"
+    },
+    "2603.28762": {
+      "title": "On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-04-01 00:32:16"
+    },
+    "2603.28743": {
+      "title": "Rethinking Language Model Scaling under Transferable Hypersphere Optimization",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "cn_title": "重新思考语言模型缩放定律：超球面优化的可迁移学习方法",
+      "tagline": "微软研究院新突破：让大模型训练更简单、更稳定、更高效！一个超参数调优技巧，竟能带来1.58倍的计算效率提升",
+      "generated_at": "2026-04-01 00:47:39"
+    },
+    "2603.28696": {
+      "title": "AdaptToken: Entropy-based Adaptive Token Selection for MLLM Long Video Understanding",
+      "pdf_downloaded": true,
+      "generated": true,
+      "uploaded": true,
+      "generated_at": "2026-04-01 00:57:43"
+    },
+    "2603.28545": {
+      "title": "ManipArena: Comprehensive Real-world Evaluation of Reasoning-Oriented Generalist Robot Manipulation",
+      "pdf_downloaded": true,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.28489": {
+      "title": "Video Generation Models as World Models: Efficient Paradigms, Architectures and Algorithms",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.28480": {
+      "title": "INSID3: Training-Free In-Context Segmentation with DINOv3",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.28319": {
+      "title": "Beyond Scanpaths: Graph-Based Gaze Simulation in Dynamic Scenes",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.28280": {
+      "title": "Multimodal-NF: A Wireless Dataset for Near-Field Low-Altitude Sensing and Communications",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.28088": {
+      "title": "GEMS: Agent-Native Multimodal Generation with Memory and Skills",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27877": {
+      "title": "HumMusQA: A Human-written Music Understanding QA Benchmark Dataset",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27703": {
+      "title": "KAT-Coder-V2 Technical Report",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27593": {
+      "title": "STRIDE: When to Speak Meets Sequence Denoising for Streaming Video Understanding",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27467": {
+      "title": "TurboAngle: Near-Lossless KV Cache Compression via Uniform Angle Quantization",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27357": {
+      "title": "Guided Lensless Polarization Imaging",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27344": {
+      "title": "TerraSeg: Self-Supervised Ground Segmentation for Any LiDAR",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27341": {
+      "title": "A Comparative Study in Surgical AI: Datasets, Foundation Models, and Barriers to Med-AGI",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27304": {
+      "title": "EpochX: Building the Infrastructure for an Emergent Agent Civilization",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27241": {
+      "title": "SaSaSaSa2VA: 2nd Place of the 5th PVUW MeViS-Text Track",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27065": {
+      "title": "Story2Proposal: A Scaffold for Structured Scientific Paper Writing",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27055": {
+      "title": "Text Data Integration",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27040": {
+      "title": "Unified Number-Free Text-to-Motion Generation Via Flow Matching",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    },
+    "2603.27027": {
+      "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
+      "pdf_downloaded": false,
+      "generated": false,
+      "uploaded": false
+    }
+  },
+  "last_fetch": "2026-03-31 23:00:01",
+  "last_fetch_date": "2026-03-31",
+  "last_cleanup_date": "2026-03-31",
+  "generated_num": 122,
+  "ungenerated_num": 31
+}

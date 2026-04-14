@@ -1,8 +1,0 @@
-/* Minimal custom styles - Tailwind handles most styling */
-html {
-  scroll-behavior: smooth;
-}
-
-.prose strong {
-  color: #1e293b;
-}
