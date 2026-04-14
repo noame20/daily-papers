@@ -1,0 +1,5 @@
+{
+  "cn_title": "让AI像医生一样思考：用知识增强数据合成和半监督强化学习培养医学推理能力",
+  "tagline": "如何让人工智能学会像医生一样，通过一步步推理来诊断疾病？这篇来自复旦、上交等机构的论文提出了创新的MedSSR框架，让AI在罕见病诊断上表现大幅提升。",
+  "title": "Eliciting Medical Reasoning with Knowledge-enhanced Data Synthesis: A Semi-Supervised Reinforcement Learning Approach"
+}
