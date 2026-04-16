@@ -1,0 +1,5 @@
+{
+  "cn_title": "盲比特流视频修复：利用元数据引导的扩散模型自动修复损坏视频",
+  "tagline": "无需人工标记！AI通过分析视频自带的技术信息，自动找到并修复损坏区域——让模糊卡顿的老视频重现清晰画面",
+  "title": "Blind Bitstream-corrupted Video Recovery via Metadata-guided Diffusion Model"
+}
