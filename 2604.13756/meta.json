@@ -1,0 +1,5 @@
+{
+  "cn_title": "MedRCube：医学影像多模态大模型的精细化评估框架",
+  "tagline": "像拆解魔方一样，从解剖部位、成像模态、任务难度三个维度，全面评估AI的医学影像读片能力",
+  "title": "MedRCube: A Multidimensional Framework for Fine-Grained and In-Depth Evaluation of MLLMs in Medical Imaging"
+}
