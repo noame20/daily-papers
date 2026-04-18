@@ -1,0 +1,5 @@
+{
+  "cn_title": "提示引导的图像编辑：基于视觉自回归模型的面具对数引导方法",
+  "tagline": "让AI精准编辑图像而不改变背景——0.82秒完成局部修改，效果超越扩散模型！",
+  "title": "Prompt-Guided Image Editing with Masked Logit Nudging in Visual Autoregressive Models"
+}
