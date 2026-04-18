@@ -1,0 +1,5 @@
+{
+  "cn_title": "EdgeDetect：基于同态聚合的重要感知梯度压缩联邦入侵检测",
+  "tagline": "如何让资源受限的边缘设备也能高效、安全地检测网络攻击？这项研究给出了答案",
+  "title": "EdgeDetect: Importance-Aware Gradient Compression with Homomorphic Aggregation for Federated Intrusion Detection"
+}
