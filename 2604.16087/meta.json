@@ -1,0 +1,5 @@
+{
+  "cn_title": "更困难的道路：零和博弈中非耦合学习的最后迭代收敛",
+  "tagline": "当两个玩家无法交流、只知道每局输赢时，如何让策略达到均衡？这篇论文证明了「每轮都接近均衡」比「最后平均接近均衡」要难得多——这是无法突破的数学极限。",
+  "title": "The Harder Path: Last Iterate Convergence for Uncoupled Learning in Zero-Sum Games with Bandit Feedback"
+}
