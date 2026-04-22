@@ -1,0 +1,5 @@
+{
+  "cn_title": "用一致性正则化缩小统一ASR Transducer的离线-流式差距",
+  "tagline": "一个模型同时搞定「离线和实时」语音识别？NVIDIA做到了！告别双倍训练的烦恼，AI模型在离线批处理和实时流式识别两种模式下都能表现出色。",
+  "title": "Reducing the Offline-Streaming Gap for Unified ASR Transducer with Consistency Regularization"
+}
