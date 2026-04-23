@@ -1,0 +1,5 @@
+{
+  "cn_title": "LoRA诱导的Logit偏移：形式化分析",
+  "tagline": "用数学揭开LoRA如何改变大模型预测的神秘面纱——一个让高中生也能理解AI微调机制的论文解读",
+  "title": "Formalising the Logit Shift Induced by LoRA: A Technical Note"
+}
