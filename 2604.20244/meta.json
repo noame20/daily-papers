@@ -1,0 +1,5 @@
+{
+  "cn_title": "LLM的混合策略蒸馏（HPD）",
+  "tagline": "让小模型高效学习大模型知识的秘诀：混合前向与反向KL散度，训练更稳定效果更好！",
+  "title": "Hybrid Policy Distillation for LLMs"
+}
