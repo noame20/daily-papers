@@ -1,0 +1,5 @@
+{
+  "cn_title": "遥感区域变化理解基准 RSRCC",
+  "tagline": "让 AI 学会看懂卫星地图的变化！Google Research 推出 12.6 万样本的新基准，看看城市这些年都变了什么",
+  "title": "RSRCC: A Remote Sensing Regional Change Comprehension Benchmark Constructed via Retrieval-Augmented Best-of-N Ranking"
+}
