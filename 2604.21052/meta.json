@@ -1,0 +1,5 @@
+{
+  "cn_title": "StyleVAR: 通过视觉自回归建模实现可控图像风格迁移",
+  "tagline": "让AI学会'穿衣服'——输入内容图和风格图，生成既有原图结构又有艺术风格的新图像",
+  "title": "StyleVAR: Controllable Image Style Transfer via Visual Autoregressive Modeling"
+}
